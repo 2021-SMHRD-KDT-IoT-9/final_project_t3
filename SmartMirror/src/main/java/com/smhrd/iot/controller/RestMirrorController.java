@@ -44,8 +44,7 @@ public class RestMirrorController {
 			fullPath = "C:/Users/user/Desktop/pictest/" + file.getOriginalFilename();
 			System.out.println("파일저장 fullPath = " + fullPath);
 			file.transferTo(new File(fullPath));
-			
-	
+				
 			Picture p = new Picture();
 			
 			p.setUsername(username);
