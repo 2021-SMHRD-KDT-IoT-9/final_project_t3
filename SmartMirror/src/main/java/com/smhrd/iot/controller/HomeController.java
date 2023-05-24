@@ -10,4 +10,10 @@ public class HomeController {
 	public String test() {
 		return "savetest";
 	}
+	
+	//  아자 
+	public void test1() {
+		// 삭제 하셍ㅇ
+	}
+	
 }
