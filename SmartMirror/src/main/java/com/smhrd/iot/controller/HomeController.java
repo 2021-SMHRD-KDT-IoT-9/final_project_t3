@@ -16,4 +16,8 @@ public class HomeController {
 		// 삭제 하셍ㅇ
 	}
 	
+	public void tt1() {
+		// 삭제 하셍ㅇ
+	}
+	
 }
