@@ -12,7 +12,7 @@ public class HomeController {
 	}
 	
 	//  아자 
-	public void test1() {
+	public void t() {
 		// 삭제 하셍ㅇ
 	}
 	
