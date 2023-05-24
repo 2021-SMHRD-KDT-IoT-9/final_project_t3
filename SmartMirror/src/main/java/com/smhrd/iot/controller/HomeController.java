@@ -6,14 +6,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class HomeController {
 
-	@GetMapping("/")
-	public String test() {
-		return "savetest";
-	}
-	
-	//  아자 
-	public void t() {
-		// 삭제 하셍ㅇ
-	}
+//	@GetMapping("/")
+//	public String test() {
+//		return "test1";
+//	}
 	
 }
