@@ -51,7 +51,6 @@ public class RestMirrorController {
 			p.setFullPath(fullPath);
 			
 			service.insertpic(p);
-			
 		}
 		
 		return "success";

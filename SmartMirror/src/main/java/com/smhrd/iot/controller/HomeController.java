@@ -11,13 +11,5 @@ public class HomeController {
 		return "savetest";
 	}
 	
-	//  아자 
-	public void t() {
-		// 삭제 하셍ㅇ
-	}
-	
-	public void tt1() {
-		// 삭제 하셍ㅇ
-	}
 	
 }
