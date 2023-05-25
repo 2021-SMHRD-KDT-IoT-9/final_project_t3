@@ -48,7 +48,7 @@ public class RestMirrorController {
 		return "success";
 	}
 	
-	
+	// username, 사진 받아서 서버 저장 / username, 사진 저장 경로 db에 저장
 	@PostMapping("/savepic")
 	public String addFile(@RequestParam String username, @RequestParam MultipartFile file)
 	throws IOException{
