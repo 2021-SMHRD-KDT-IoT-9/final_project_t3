@@ -7,9 +7,13 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -20,7 +24,9 @@ import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.smhrd.iot.domain.Mirror;
+import com.smhrd.iot.domain.MyHistroy;
 import com.smhrd.iot.domain.Picture;
+import com.smhrd.iot.domain.Video;
 import com.smhrd.iot.service.MirrorService;
 
 @RestController
@@ -106,4 +112,33 @@ public class RestMirrorController {
 		mav.setViewName("test");   // jsp파일 이름
 		return mav;
  }
+	
+    @CrossOrigin
+    @GetMapping("/test")
+    public ResponseEntity<String> getData() {
+        String data = "스마트미러";
+        return ResponseEntity.ok(data);
+    }
+
+    @CrossOrigin
+    @GetMapping("/videos")
+    public ResponseEntity<List<MyHistroy>> myHistory(@RequestParam String query) {
+       System.out.println("Received id: " + query);
+       
+       return ResponseEntity.ok(service.myHistory(query));
+    }
+    
+//    @CrossOrigin
+//    @GetMapping("/videos")
+//    public ResponseEntity<List<Video>> getVideos(@RequestParam String query) {
+//       System.out.println("Received query: " + query);
+//        List<Video> videos = new ArrayList<>();
+//        videos.add(new Video(1, "Video 1","https://www.youtube.com/embed/mFP7oGm-3nk"));
+//        videos.add(new Video(2, "Video 2",""));
+//        videos.add(new Video(3, "Video 3",""));
+//        return ResponseEntity.ok(videos);
+//    }
+
 }
+
+	
