@@ -73,6 +73,7 @@ public class RestMirrorController {
 	}
 	
 	
+	// 플라스크에서 스프링으로 스트링 타입 받기
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public ModelAndView Test() {
 		ModelAndView mav = new ModelAndView();
@@ -110,6 +111,8 @@ public class RestMirrorController {
 		mav.setViewName("test");   // jsp파일 이름
 		return mav;
  }
+	
+	// id값 받아서 db에서 pw값 가져오기
 	@CrossOrigin
 	@GetMapping("/idconfig")
 	public String idconfig(@RequestParam String id) {
@@ -117,6 +120,7 @@ public class RestMirrorController {
 		return service.idconfig(id);
 	}
 	
+	// 문자열 리턴
     @CrossOrigin
     @GetMapping("/test")
     public ResponseEntity<String> getData() {
@@ -124,14 +128,16 @@ public class RestMirrorController {
         return ResponseEntity.ok(data);
     }
 
+    // MyHistory테이블 id값으로 조회
     @CrossOrigin
-    @GetMapping("/videos")
+    @GetMapping("/myhistory")
     public ResponseEntity<List<MyHistory>> myHistory(@RequestParam String query) {
        System.out.println("Received id: " + query);
        
        return ResponseEntity.ok(service.myHistory(query));
     }
     
+    // 리스트에 담아 보내기
     @CrossOrigin
     @GetMapping("/videolist")
     public ResponseEntity<List<Video>> getVideos(@RequestParam String query) {
