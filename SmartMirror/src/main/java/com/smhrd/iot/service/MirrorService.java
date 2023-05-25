@@ -29,4 +29,8 @@ public class MirrorService {
 		return mapper.myHistory(id);
 	}
 	
+	public String idconfig(String id) {
+		return mapper.idconfig(id);
+	}
+	
 }

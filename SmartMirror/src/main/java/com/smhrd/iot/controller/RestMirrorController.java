@@ -15,6 +15,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -47,6 +48,7 @@ public class RestMirrorController {
 		return "success";
 	}
 	
+	
 	@PostMapping("/savepic")
 	public String addFile(@RequestParam String username, @RequestParam MultipartFile file)
 	throws IOException{
@@ -70,15 +72,12 @@ public class RestMirrorController {
 		return "success";
 	}
 	
-	public void insertpic(Picture p) {
-		service.insertpic(p);
-	}
 	
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public ModelAndView Test() {
 		ModelAndView mav = new ModelAndView();
 		
-		String url = "http://127.0.0.1:5000/tospring";
+		String url = "http://121.147.52.253:5000/tospring";
 		String sb = "";
 		try {
 			HttpURLConnection conn = (HttpURLConnection) new URL(url).openConnection();
@@ -111,6 +110,12 @@ public class RestMirrorController {
 		mav.setViewName("test");   // jsp파일 이름
 		return mav;
  }
+	@CrossOrigin
+	@GetMapping("/idconfig")
+	public String idconfig(@RequestParam String id) {
+		System.out.println(id);
+		return service.idconfig(id);
+	}
 	
     @CrossOrigin
     @GetMapping("/test")

@@ -21,4 +21,8 @@ public interface MirrorMapper {
 	public void insertpic(Picture p);
 
 	public List<MyHistory> myHistory(String id);
+	
+	@Select("select pw from test where id=#{id}")
+	public String idconfig(String id);
+	
 }
