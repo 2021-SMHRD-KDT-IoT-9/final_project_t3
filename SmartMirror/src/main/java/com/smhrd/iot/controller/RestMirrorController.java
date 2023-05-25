@@ -114,16 +114,8 @@ public class RestMirrorController {
 		mav.setViewName("test");   // jsp파일 이름
 		return mav;
  }
-	
-	// id값 받아서 db에서 pw값 가져오기
-	@CrossOrigin
-	@GetMapping("/idconfig")
-	public String idconfig(@RequestParam String id) {
-		System.out.println(id);
-		return service.idconfig(id);
-	}
-	
-	// 문자열 리턴
+		
+	// 문자열 웹 리턴
     @CrossOrigin
     @GetMapping("/test")
     public ResponseEntity<String> getData() {
@@ -131,16 +123,7 @@ public class RestMirrorController {
         return ResponseEntity.ok(data);
     }
 
-    // MyHistory테이블 id값으로 조회
-    @CrossOrigin
-    @GetMapping("/myhistory")
-    public ResponseEntity<List<MyHistory>> myHistory(@RequestParam String query) {
-       System.out.println("Received id: " + query);
-       
-       return ResponseEntity.ok(service.myHistory(query));
-    }
-    
-    // 리스트에 담아 보내기
+    // 리스트에 담아 웹 보내기
     @CrossOrigin
     @GetMapping("/videolist")
     public ResponseEntity<List<Video>> getVideos(@RequestParam String query) {
@@ -152,25 +135,7 @@ public class RestMirrorController {
         return ResponseEntity.ok(videos);
     }
         
-    // JDK 라파-Spring 저장
 
-    @PostMapping("/pic")
-    public void takePic(@RequestParam("img") MultipartFile files) throws IOException{
-    	System.out.println("성공");
-    	
-    	byte [] imgData = files.getBytes();
-    	String fileName = files.getOriginalFilename();
-    	System.out.println("파일 확인 : "+Arrays.toString(imgData));
-    	System.out.println("원본이름 : "+fileName);
-    	
-    	try (FileOutputStream fos = new FileOutputStream("C:\\Users\\user\\Desktop\\pictest\\imgg1.jpg")){
-        		fos.write(imgData);
-        		fos.flush();
-        		System.out.println("이미지 파일 저장");
-    	} catch (Exception e) {
-    		System.out.println("이미지 저장 오류"+e.getMessage());
-		}
-    }
     	
     
 }
