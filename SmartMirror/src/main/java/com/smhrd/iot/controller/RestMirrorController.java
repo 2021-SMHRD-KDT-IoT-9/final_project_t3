@@ -2,12 +2,14 @@ package com.smhrd.iot.controller;
 
 import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,6 +19,7 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -74,7 +77,7 @@ public class RestMirrorController {
 	
 	
 	// 플라스크에서 스프링으로 스트링 타입 받기
-	@RequestMapping(value = "/", method = RequestMethod.GET)
+	@RequestMapping(value = "/testt", method = RequestMethod.GET)
 	public ModelAndView Test() {
 		ModelAndView mav = new ModelAndView();
 		
@@ -148,7 +151,28 @@ public class RestMirrorController {
         videos.add(new Video(3, "Video 3",""));
         return ResponseEntity.ok(videos);
     }
+        
+    // JDK 라파-Spring 저장
 
+    @PostMapping("/pic")
+    public void takePic(@RequestParam("img") MultipartFile files) throws IOException{
+    	System.out.println("성공");
+    	
+    	byte [] imgData = files.getBytes();
+    	String fileName = files.getOriginalFilename();
+    	System.out.println("파일 확인 : "+Arrays.toString(imgData));
+    	System.out.println("원본이름 : "+fileName);
+    	
+    	try (FileOutputStream fos = new FileOutputStream("C:\\Users\\user\\Desktop\\pictest\\imgg1.jpg")){
+        		fos.write(imgData);
+        		fos.flush();
+        		System.out.println("이미지 파일 저장");
+    	} catch (Exception e) {
+    		System.out.println("이미지 저장 오류"+e.getMessage());
+		}
+    }
+    	
+    
 }
 
 	
