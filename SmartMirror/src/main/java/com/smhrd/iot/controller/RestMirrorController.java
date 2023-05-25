@@ -121,23 +121,23 @@ public class RestMirrorController {
     }
 
     @CrossOrigin
-    @GetMapping("/videos")
+    @GetMapping("/img")
     public ResponseEntity<List<MyHistroy>> myHistory(@RequestParam String query) {
        System.out.println("Received id: " + query);
        
        return ResponseEntity.ok(service.myHistory(query));
     }
     
-//    @CrossOrigin
-//    @GetMapping("/videos")
-//    public ResponseEntity<List<Video>> getVideos(@RequestParam String query) {
-//       System.out.println("Received query: " + query);
-//        List<Video> videos = new ArrayList<>();
-//        videos.add(new Video(1, "Video 1","https://www.youtube.com/embed/mFP7oGm-3nk"));
-//        videos.add(new Video(2, "Video 2",""));
-//        videos.add(new Video(3, "Video 3",""));
-//        return ResponseEntity.ok(videos);
-//    }
+    @CrossOrigin
+    @GetMapping("/videos")
+    public ResponseEntity<List<Video>> getVideos(@RequestParam String query) {
+       System.out.println("Received query: " + query);
+        List<Video> videos = new ArrayList<>();
+        videos.add(new Video(1, "Video 1","https://www.youtube.com/embed/mFP7oGm-3nk"));
+        videos.add(new Video(2, "Video 2",""));
+        videos.add(new Video(3, "Video 3",""));
+        return ResponseEntity.ok(videos);
+    }
 
 }
 
