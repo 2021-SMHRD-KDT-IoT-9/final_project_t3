@@ -11,3 +11,4 @@ public class Mirror {
 	private String id;
 	private String pw;
 }
+	

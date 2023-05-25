@@ -10,4 +10,6 @@ import lombok.Setter;
 public class Picture {
 	private String username;
 	private String fullPath;
+	
+	
 }
