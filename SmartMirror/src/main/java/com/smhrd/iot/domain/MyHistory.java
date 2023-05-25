@@ -9,11 +9,13 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class MyHistroy {
-	private String member_id ;
-	private String cut_dy ;
-	private int sequence ;
-	private String salon_id ;
-	private String pic_path;
-	private String memo;
+public class MyHistory {
+
+		private String member_id ;
+		private String cut_dy ;
+		private int sequence ;
+		private String salon_id ;
+		private String pic_path;
+		private String memo;
+
 }

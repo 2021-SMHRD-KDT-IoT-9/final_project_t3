@@ -2,8 +2,8 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.smhrd.iot.mapper.MirrorMapper"> 
 
-<!-- 	<select id="myHistory" resultType="com.smhrd.iot.domain.MyHistory">
+	<select id="myHistory" resultType="com.smhrd.iot.domain.MyHistory">
 		select * from my_history where member_id = #{id}
-	</select> -->
+	</select>
 
 </mapper>

@@ -7,7 +7,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import com.smhrd.iot.domain.Mirror;
-import com.smhrd.iot.domain.MyHistroy;
+import com.smhrd.iot.domain.MyHistory;
 import com.smhrd.iot.domain.Picture;
 import com.smhrd.iot.mapper.MirrorMapper;
 
@@ -25,7 +25,7 @@ public class MirrorService {
 		mapper.insertpic(p);
 	}
 	
-	public List<MyHistroy> myHistory (String id){
+	public List<MyHistory> myHistory (String id){
 		return mapper.myHistory(id);
 	}
 	

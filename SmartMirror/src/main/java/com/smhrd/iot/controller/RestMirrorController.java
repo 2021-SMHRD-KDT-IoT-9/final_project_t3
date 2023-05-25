@@ -24,7 +24,7 @@ import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.smhrd.iot.domain.Mirror;
-import com.smhrd.iot.domain.MyHistroy;
+import com.smhrd.iot.domain.MyHistory;
 import com.smhrd.iot.domain.Picture;
 import com.smhrd.iot.domain.Video;
 import com.smhrd.iot.service.MirrorService;
@@ -121,15 +121,15 @@ public class RestMirrorController {
     }
 
     @CrossOrigin
-    @GetMapping("/img")
-    public ResponseEntity<List<MyHistroy>> myHistory(@RequestParam String query) {
+    @GetMapping("/videos")
+    public ResponseEntity<List<MyHistory>> myHistory(@RequestParam String query) {
        System.out.println("Received id: " + query);
        
        return ResponseEntity.ok(service.myHistory(query));
     }
     
     @CrossOrigin
-    @GetMapping("/videos")
+    @GetMapping("/videolist")
     public ResponseEntity<List<Video>> getVideos(@RequestParam String query) {
        System.out.println("Received query: " + query);
         List<Video> videos = new ArrayList<>();
