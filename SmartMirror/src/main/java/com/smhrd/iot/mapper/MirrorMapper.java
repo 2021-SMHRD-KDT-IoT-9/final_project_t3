@@ -17,8 +17,8 @@ public interface MirrorMapper {
 	@Insert("insert into test (id, pw) values (#{id},#{pw})")
 	public void insert(Mirror m);
 	
-	@Insert("insert into picture (username, fullPath) values (#{username},#{fullPath})")
-	public void insertpic(Picture p);
+	@Insert("insert into my_history (member_id, salon_id, pic_path) values (#{member_id},#{salon_id},#{pic_path})")
+	public void insertpic(MyHistory mh);
 
 	public List<MyHistory> myHistory(String id);
 	

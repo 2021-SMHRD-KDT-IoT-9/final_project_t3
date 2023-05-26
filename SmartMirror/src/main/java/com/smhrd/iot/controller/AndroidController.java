@@ -25,8 +25,7 @@ public class AndroidController {
 		System.out.println(id);
 		return service.idconfig(id);
 	}
-	
-	
+		
     // MyHistory테이블 id값으로 조회
     @CrossOrigin
     @GetMapping("/myhistory")

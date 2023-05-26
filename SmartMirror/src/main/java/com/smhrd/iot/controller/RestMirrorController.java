@@ -13,6 +13,10 @@ import java.util.Arrays;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.io.ClassPathResource;
+import org.springframework.core.io.FileSystemResource;
+import org.springframework.core.io.ResourceLoader;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -33,6 +37,8 @@ import com.smhrd.iot.domain.Picture;
 import com.smhrd.iot.domain.Video;
 import com.smhrd.iot.service.MirrorService;
 
+import io.opencensus.resource.Resource;
+
 @RestController
 public class RestMirrorController {
 
@@ -52,28 +58,28 @@ public class RestMirrorController {
 	}
 	
 	// username, 사진 받아서 서버 저장 / username, 사진 저장 경로 db에 저장
-	@PostMapping("/savepic")
-	public String addFile(@RequestParam String username, @RequestParam MultipartFile file)
-	throws IOException{
-		System.out.println("username = "+ username);
-		
-		this.username = username; 
-				
-		if(!file.isEmpty()) {
-			fullPath = "C:/Users/user/Desktop/pictest/" + file.getOriginalFilename();
-			System.out.println("파일저장 fullPath = " + fullPath);
-			file.transferTo(new File(fullPath));
-				
-			Picture p = new Picture();
-			
-			p.setUsername(username);
-			p.setFullPath(fullPath);
-			
-			service.insertpic(p);
-		}
-		
-		return "success";
-	}
+//	@PostMapping("/savepic")
+//	public String addFile(@RequestParam String username, @RequestParam MultipartFile file)
+//	throws IOException{
+//		System.out.println("username = "+ username);
+//		
+//		this.username = username; 
+//				
+//		if(!file.isEmpty()) {
+//			fullPath = "C:/Users/user/Desktop/pictest/" + file.getOriginalFilename();
+//			System.out.println("파일저장 fullPath = " + fullPath);
+//			file.transferTo(new File(fullPath));
+//				
+//			Picture p = new Picture();
+//			
+//			p.setUsername(username);
+//			p.setFullPath(fullPath);
+//			
+//			service.insertpic(m);
+//		}
+//		
+//		return "success";
+//	}
 	
 	
 	// 플라스크에서 스프링으로 스트링 타입 받기
@@ -115,13 +121,26 @@ public class RestMirrorController {
 		return mav;
  }
 		
-	// 문자열 웹 리턴
+	// 이미지 파일 명 웹 리턴
     @CrossOrigin
     @GetMapping("/test")
     public ResponseEntity<String> getData() {
-        String data = "스마트미러";
+        String data = "img01";
         return ResponseEntity.ok(data);
     }
+    
+    @CrossOrigin
+    @GetMapping("/hodoo")
+    public ResponseEntity<String> sendVideo() {
+        String data = "hodoo.mp4";
+        return ResponseEntity.ok(data);
+    }
+    
+    @GetMapping("/img")
+    public String img() {
+    	return "test";
+    }
+   
 
     // 리스트에 담아 웹 보내기
     @CrossOrigin
@@ -135,8 +154,24 @@ public class RestMirrorController {
         return ResponseEntity.ok(videos);
     }
         
+//    @CrossOrigin
+//    @GetMapping("/image")
+//    public ResponseEntity<FileSystemResource> getImage() throws IOException {
+//            // 이미지 파일을 읽어옵니다.
+//            FileSystemResource imageResource = new FileSystemResource("static/img/img01.jpg"); // 이미지 파일 경로로 수정해야 합니다.
+//
+//            // 이미지 파일을 응답에 포함하여 전송합니다.
+//            return ResponseEntity.ok()
+//                    .contentType(MediaType.IMAGE_JPEG)
+//                    .body(imageResource);
+//        }
 
-    	
+    
+    
+    
+
+    
+    
     
 }
 

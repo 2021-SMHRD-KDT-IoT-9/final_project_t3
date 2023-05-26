@@ -8,7 +8,6 @@ import org.springframework.stereotype.Service;
 
 import com.smhrd.iot.domain.Mirror;
 import com.smhrd.iot.domain.MyHistory;
-import com.smhrd.iot.domain.Picture;
 import com.smhrd.iot.mapper.MirrorMapper;
 
 @Service
@@ -21,8 +20,8 @@ public class MirrorService {
 		mapper.insert(m);
 	}
 	
-	public void insertpic(Picture p) {
-		mapper.insertpic(p);
+	public void insertpic(MyHistory mh) {
+		mapper.insertpic(mh);
 	}
 	
 	public List<MyHistory> myHistory (String id){

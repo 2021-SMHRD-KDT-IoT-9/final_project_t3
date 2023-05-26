@@ -11,10 +11,10 @@ import lombok.Setter;
 @AllArgsConstructor
 public class MyHistory {
 
-		private String member_id ;
-		private String cut_dy ;
-		private int sequence ;
-		private String salon_id ;
+		private String member_id;
+		private String cut_dy;
+		private int sequence;
+		private String salon_id;
 		private String pic_path;
 		private String memo;
 
