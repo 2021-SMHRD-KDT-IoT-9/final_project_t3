@@ -18,7 +18,6 @@ public class AndroidController {
 	@Autowired
 	private MirrorService service;
 	
-	
 	// id값 받아서 db에서 pw값 가져오기
 	@CrossOrigin
 	@GetMapping(value="/idconfig")
@@ -28,7 +27,7 @@ public class AndroidController {
 		System.out.println(list.get(0).getSalon_name());
 		return ResponseEntity.ok(service.idconfig(id));
 	}
-		
+	
     // MyHistory테이블 id값으로 조회
     @CrossOrigin
     @GetMapping("/myhistory")
