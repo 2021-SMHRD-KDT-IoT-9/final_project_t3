@@ -22,7 +22,6 @@ public interface MirrorMapper {
 
 	public List<MyHistory> myHistory(String id);
 	
-	@Select("select pw from test where id=#{id}")
-	public String idconfig(String id);
+	public List<MyHistory> idconfig(String id);
 	
 }

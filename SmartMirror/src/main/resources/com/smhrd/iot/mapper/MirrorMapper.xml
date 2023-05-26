@@ -6,4 +6,11 @@
 		select * from my_history where member_id = #{id}
 	</select>
 
+	<select id="idconfig" resultType="com.smhrd.iot.domain.MyHistory">
+		select b.member_id,b.cut_dy,a.salon_name,b.pic_path,b.memo
+		from salon_info as a left join my_history as b
+		on a.salon_id = b.salon_id 
+		where member_id = #{id}
+	</select>
+
 </mapper>

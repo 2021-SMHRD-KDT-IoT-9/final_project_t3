@@ -17,5 +17,6 @@ public class MyHistory {
 		private String salon_id;
 		private String pic_path;
 		private String memo;
+		private String salon_name; // 안드로이드 떄문에 추가 
 
 }

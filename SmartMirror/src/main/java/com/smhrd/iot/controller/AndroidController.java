@@ -18,12 +18,15 @@ public class AndroidController {
 	@Autowired
 	private MirrorService service;
 	
+	
 	// id값 받아서 db에서 pw값 가져오기
 	@CrossOrigin
-	@GetMapping("/idconfig")
-	public String idconfig(@RequestParam String id) {
+	@GetMapping(value="/idconfig")
+	public ResponseEntity<List<MyHistory>> idconfig(@RequestParam String id) {
 		System.out.println(id);
-		return service.idconfig(id);
+		List<MyHistory> list = service.idconfig(id);
+		System.out.println(list.get(0).getSalon_name());
+		return ResponseEntity.ok(service.idconfig(id));
 	}
 		
     // MyHistory테이블 id값으로 조회
