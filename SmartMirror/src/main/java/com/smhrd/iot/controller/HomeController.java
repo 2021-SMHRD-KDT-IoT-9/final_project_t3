@@ -5,19 +5,24 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
 public class HomeController {
-
+	
 	@GetMapping("/")
 	public String main() {
-		return "testmain";
+		return "main";
+	}
+	
+	@GetMapping("/uptest")
+	public String testmain() {
+		return "ztest-main";
 	}
 	
 	@GetMapping("/iup")
 	public String test() {
-		return "saveImg";
+		return "ztest-saveImg";
 	}
 	@GetMapping("/vup")
 	public String vup() {
-		return "saveVideo";
+		return "ztest-saveVideo";
 	}
 
 	

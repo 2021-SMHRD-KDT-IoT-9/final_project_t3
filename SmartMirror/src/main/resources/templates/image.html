@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <div class="title">
+        <a href="main.html">
+            <img src="/img/logo.png" />
+        </a>
+        <ul>
+            <a href="video.html">
+                <li>동영상 관리</li>
+            </a>
+            <a href="image.html">
+                <li>이미지 관리</li>
+            </a>
+            <a href="style.html">
+                <li>스타일 관리</li>
+            </a>
+            <a href="hair.html">
+                <li>등록 스타일 보기</li>
+            </a>
+        </ul>
+    </div>
+
+
+    <div class="videolist">
+
+        <h1>이미지 리스트</h1>
+
+        <div class="logoset">
+            <div class="logostyle">
+                <img src="/img/pngegg (2).png" width="100px" height="100px" />
+                <p>샴푸 광고 </p>
+                <span>삭제하기❌</span>
+            </div>
+
+            <div class="logostyle">
+                <img src="/img/pngegg (2).png" width="100px" height="100px" />
+                <p>헤어왁스 광고 </p>
+                <span>삭제하기❌</span>
+            </div>
+
+            <div class="logostyle">
+                <img src="/img/pngegg (2).png" width="100px" height="100px" />
+                <p>비비크림 광고 </p>
+                <span>삭제하기❌</span>
+            </div>
+
+            <div class="logostyle">
+                <img src="/img/pngegg (2).png" width="100px" height="100px" />
+                <p>트리트먼트 광고 </p>
+                <span>삭제하기❌</span>
+            </div>
+
+            <div class="logostyle">
+                <img src="/img/pngegg (2).png" width="100px" height="100px" />
+                <p>염색약 광고 </p>
+                <span>삭제하기❌</span>
+            </div>
+
+            <div class="logostyle">
+                <img src="/img/pngegg (2).png" width="100px" height="100px" />
+                <p>샴푸 광고 </p>
+                <span>삭제하기❌</span>
+            </div>
+
+        </div>
+
+        <div style="margin-top: 30px;">
+            <input type="file" id="uploadBtn">
+            이미지 이름 설정:
+            <input type="text" id="videoName">
+            <button onclick="uploadFile()" class="btn-gradient">업로드</button>
+        </div>
+    </div>
+    </div>
+
+</body>
+
+<script>
+    function uploadFile() {
+        const input = document.getElementById("uploadBtn");
+        const videoName = document.getElementById("videoName")
+        const file = input.files[0]; // 선택된 파일 가져오기
+
+        if (file) {
+            // 파일 업로드 처리 로직을 여기에 작성합니다.
+            console.log("Selected file:", file);
+            // 파일 업로드 로직을 작성할 수 있습니다.
+            // 예를 들어, 서버로 파일을 전송하거나 다른 처리를 수행할 수 있습니다.
+        } else {
+            console.log("No file selected.");
+        }
+    }
+</script>
+
+</html>

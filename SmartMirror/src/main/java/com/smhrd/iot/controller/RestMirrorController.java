@@ -54,7 +54,7 @@ public class RestMirrorController {
 		System.out.println("가입성공");
 		System.out.println(m.getId());
 		System.out.println(m.getPw());
-		return "success";
+		return "test-success";
 	}
 	
 	
@@ -74,14 +74,14 @@ public class RestMirrorController {
 			i.setSalon_id("a001");
 			i.setImg_id(i.getSalon_id()+"_"+path);
 			
-			String fullPath = "C:/Users/user/git/final_project_t3/SmartMirror/src/main/resources/static/img/"+i.getImg_id()+".jpg";
+			String fullPath = "C:/Users/user/git/final_project_t3/SmartMirror/src/main/resources/static/uploadimg/"+i.getImg_id()+".jpg";
 			System.out.println("파일저장 fullPath = " + fullPath);
 			file.transferTo(new File(fullPath));
 			i.setImg_name(imgName);
 				
 			service.saveImg(i);
 		}
-		return "success";
+		return "test-success";
 	}
 	
 	
@@ -101,14 +101,14 @@ public class RestMirrorController {
 			v.setSalon_id("a001");
 			v.setVideo_id(v.getSalon_id()+"_"+path);
 			
-			String fullPath = "C:/Users/user/git/final_project_t3/SmartMirror/src/main/resources/static/video/"+v.getVideo_id()+".mp4";
+			String fullPath = "C:/Users/user/git/final_project_t3/SmartMirror/src/main/resources/static/uploadvideo/"+v.getVideo_id()+".mp4";
 			System.out.println("파일저장 fullPath = " + fullPath);
 			file.transferTo(new File(fullPath));
 			v.setVideo_name(videoName);
 				
 			service.saveVideo(v);
 		}
-		return "success";
+		return "test-success";
 	}
 	
 	
@@ -166,10 +166,10 @@ public class RestMirrorController {
         return ResponseEntity.ok(data);
     }
     
-    @GetMapping("/img")
-    public String img() {
-    	return "test";
-    }
+//    @GetMapping("/img")
+//    public String img() {
+//    	return "test";
+//    }
    
 
     // 리스트에 담아 웹 보내기

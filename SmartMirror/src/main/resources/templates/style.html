@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <div class="title">
+        <a href="main.html">
+            <img src="/img/logo.png" />
+        </a>
+        <ul>
+            <a href="video.html">
+                <li>동영상 관리</li>
+            </a>
+            <a href="image.html">
+                <li>이미지 관리</li>
+            </a>
+            <a href="style.html">
+                <li>스타일 관리</li>
+            </a>
+            <a href="hair.html">
+                <li>등록 스타일 보기</li>
+            </a>
+        </ul>
+    </div>
+
+
+    <div class="videolist">
+
+        <h1>저장된 헤어스타일</h1>
+
+        <div class="logoset">
+            <div class="logostyle2">
+                <img src="/img/img3.png" width="250px" height="250px" />
+                <br>
+                <p>스타일명 : 리젠트컷</p>
+                <p>날짜 : 2023/05/23</p>
+                <p>노출여부 : YES</p>
+                <a href="#" onclick="toggleSettings(this)">
+                    <p>수정하기</p>
+                </a>
+
+                <div class="setting" style="display: none;">
+                    <span>스타일명 :</span>
+                    <input type="text" id="style" /> <br>
+                    <span>노출여부 : </span>
+                    <input type="text" id="exposure" />
+                    <br>
+                    <button onclick="submitSettings(this)">수정완료</button>
+                </div>
+            </div>
+
+            <div class="logostyle2">
+                <img src="/img/img4.jpg" width="220px" height="250px" />
+                <br>
+                <p>스타일명 : 롱헤어</p>
+                <p>날짜 : 2023/05/22</p>
+                <p>노출여부 : YES</p>
+                <a href="#" onclick="toggleSettings(this)">
+                    <p>수정하기</p>
+                </a>
+
+                <div class="setting" style="display: none;">
+                    <span>스타일명 :</span>
+                    <input type="text" id="style" /> <br>
+                    <span>노출여부 : </span>
+                    <input type="text" id="exposure" />
+                    <br>
+                    <button onclick="submitSettings(this)">수정완료</button>
+                </div>
+            </div>
+
+            <div class="logostyle2">
+                <img src="/img/img5.png" width="220px" height="250px" />
+                <br>
+                <p>스타일명 : </p>
+                <p>날짜 : 2023/05/20</p>
+                <p>노출여부 : NO</p>
+                <a href="#" onclick="toggleSettings(this)">
+                    <p>수정하기</p>
+                </a>
+
+                <div class="setting" style="display: none;">
+                    <span>스타일명 :</span>
+                    <input type="text" id="style" /> <br>
+                    <span>노출여부 : </span>
+                    <input type="text" id="exposure" />
+                    <br>
+                    <button onclick="submitSettings(this)">수정완료</button>
+                </div>
+            </div>
+
+        </div>
+
+</body>
+
+
+<script>
+    function toggleSettings(link) {
+        var settingDiv = link.nextElementSibling;
+        if (settingDiv.style.display === "none") {
+            settingDiv.style.display = "block";
+        } else {
+            settingDiv.style.display = "none";
+        }
+    }
+
+    function submitSettings(button) {
+        var settingDiv = button.parentNode;
+        var styleInput = settingDiv.querySelector(".style-input");
+        var exposureInput = settingDiv.querySelector(".exposure-input");
+        // 여기에서 설정 값을 처리하거나 서버로 전송할 수 있습니다.
+    }
+</script>
+
+</html>

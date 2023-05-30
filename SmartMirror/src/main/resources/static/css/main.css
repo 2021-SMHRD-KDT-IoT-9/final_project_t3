@@ -1,0 +1,216 @@
+@font-face {
+    font-family: 'NanumSquareNeo-Variable';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TheJamsil5Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302_01@1.0/TheJamsil5Bold.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SBAggroB';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SBAggroB.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,500,300,700);
+
+body{
+  background: -webkit-linear-gradient(left, #ebe7de, #fdd7abea);
+  background: linear-gradient(to right, #ebe7de, #fdd7abea);
+  font-family: 'Roboto', sans-serif;
+}
+
+
+a {
+    color: inherit; /* 부모 요소로부터 상속받은 색상을 사용합니다. */
+    text-decoration: none; /* 밑줄 효과를 제거합니다. */
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    padding-left: 100px;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+    margin: auto;
+    justify-content: center;
+}
+
+ul li {
+    margin-right: 200px;
+    font-size: 25px;
+    font-family: 'TheJamsil5Bold';
+    text-align: center;
+}
+
+
+.main {
+    position: relative; /* 부모 요소를 기준으로 자식 요소의 위치를 설정하기 위해 필요합니다. */
+    background-image: url("/img/img2.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 0;
+    padding-bottom: 50%;
+    border-radius: 300px;
+    overflow: hidden; /* 배경 이미지를 컨테이너 안에 숨깁니다. */
+}
+
+.main::before { 
+    content: "";
+    position: absolute; /* 배경 이미지를 위해 가상 요소를 절대 위치로 설정합니다. */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.6); /* 배경 이미지 위에 투명한 검은색 레이어를 추가합니다. */
+    z-index: 1; /* 텍스트를 위해 배경 이미지 위에 겹쳐지도록 설정합니다. */
+    border-radius: 40px;
+}
+
+.main h1 {
+    font-family: 'SBAggroB';
+    text-align: center;
+    color: rgb(20, 15, 15); /* 텍스트 색상을 원하는 색상으로 설정합니다. */
+    position: relative; /* 텍스트 위치를 조정하기 위해 필요합니다. */
+    z-index: 2; /* 텍스트가 레이어 위에 나타나도록 설정합니다. */
+    font-size: 55px;
+    margin-top: 300px;
+    margin-bottom: 50px;
+}
+
+.main p {
+    font-family: 'GmarketSansMedium';
+    text-align: center;
+    color: rgb(20, 15, 15); /* 텍스트 색상을 원하는 색상으로 설정합니다. */
+    position: relative; /* 텍스트 위치를 조정하기 위해 필요합니다. */
+    z-index: 2; /* 텍스트가 레이어 위에 나타나도록 설정합니다. */
+    font-size: 20px;
+}
+
+  
+.videolist {
+    width: 80%; /* 화면의 60%로 너비 설정 */
+    height: 700px; /* 높이 700px로 설정 */
+    background: linear-gradient(to right, #ffffff, #fff4eaea);
+    border-radius: 40px; /* 모서리를 10px로 둥글게 깎습니다. */
+    margin: 0 auto; /* 가로 중앙 정렬을 위해 margin을 자동으로 설정합니다. */
+    margin-top: 50px;
+    padding: 50px;
+}   
+
+.btn-gradient {
+    color: rgb(0, 0, 0);
+    height: 50px;
+    padding: 10px 30px;
+    display: inline-block;
+    position: relative;
+    border: 1px solid rgba(0, 0, 0, 0.21);
+    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    background: rgb(173, 187, 231);
+    transition: transform 0.3s; /* 부드러운 애니메이션을 위한 transition 속성 추가 */
+    cursor: pointer;
+    font-family: "GmarketSansMedium";
+}
+
+.btn-gradient:active {
+    transform: translateY(6px); /* 눌렸을 때 아래로 2px 이동하는 효과를 줍니다. */
+}
+
+#uploadBtn {
+    font-family: "GmarketSansMedium";
+    color: rgb(0, 0, 0);
+    padding: 10px 10px;
+    display: inline-block;
+    position: relative;
+    border: 1px solid rgba(0, 0, 0, 0.21);
+    border-bottom: 4px solid rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    background: rgb(238, 237, 237);
+    transition: transform 0.3s; /* 부드러운 애니메이션을 위한 transition 속성 추가 */
+    cursor: pointer;
+}
+
+#uploadBtn:active {
+    transform: translateY(6px); /* 눌렸을 때 아래로 2px 이동하는 효과를 줍니다. */
+}
+
+.logoset {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.logostyle{
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 150px;
+    height: 150px;
+}
+
+.logostyle p {
+    font-family: 'TheJamsil5Bold';
+    font-size: 20px;
+    padding: 0px;
+    margin: 0px;
+}
+
+.logostyle span {
+    font-family: 'TheJamsil5Bold';
+    font-size: 18px;
+    padding: 0px;
+    margin-top: 3px;
+}
+
+.logostyle2{
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 400px;
+    height: 600px;
+}
+
+.logostyle2 p {
+    font-family: 'TheJamsil5Bold';
+    font-size: 25px;
+    padding: 0px;
+    margin-top: 10px;
+    margin-bottom: 0px;
+}
+
+.videolist h1 {
+    font-family: 'GmarketSansMedium';
+}
+
+.setting{
+    font-size: 20px;
+    font-family: "GmarketSansMedium";
+}
+
+@media screen and (max-width: 400px) {
+    .logostyle {
+        flex-basis: calc(100% - 10px);
+    }
+}
