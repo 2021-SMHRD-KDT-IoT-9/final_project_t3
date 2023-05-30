@@ -1,6 +1,4 @@
-
-##before
-
+#before
 # http 통신 관련
 import requests
 
