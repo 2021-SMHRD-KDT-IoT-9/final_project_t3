@@ -21,6 +21,7 @@ public class RaspController {
 	private MirrorService service;
 	private int cnt = 0;
 	
+	
     // JDK 라파-Spring Before 사진 저장
     @PostMapping("/before")
     public void beforePic(@RequestParam("img") MultipartFile files) throws IOException{
@@ -28,7 +29,7 @@ public class RaspController {
     	
     	byte [] imgData = files.getBytes();
     	String fileName = files.getOriginalFilename();
-    	System.out.println("파일 확인 : "+Arrays.toString(imgData));
+    	//System.out.println("파일 확인 : "+Arrays.toString(imgData));
     	System.out.println("원본이름 : "+fileName);
     	
 		MyHistory mh = new MyHistory();
@@ -58,21 +59,21 @@ public class RaspController {
     }
     
     
-    // 애프터 사진 파일 저장
+    // 라파-Spring after 사진 저장
     @PostMapping("/after")
-    public void afterPic(@RequestParam("img") MultipartFile files) throws IOException{
+    public void afterPic(@RequestParam("img") MultipartFile files, @RequestParam("userId") String userId) throws IOException{
     	cnt++;
     	    	
     	byte [] imgData = files.getBytes();
     	String fileName = files.getOriginalFilename();
-    	System.out.println("파일 확인 : "+Arrays.toString(imgData));
+    	//System.out.println("파일 확인 : "+Arrays.toString(imgData));
     	System.out.println("원본이름 : "+fileName);
-    	
+    	System.out.println("userId : "+userId);
 		MyHistory mh = new MyHistory();
 		
-		mh.setMember_id("bb");
+		mh.setMember_id(userId);
 		mh.setSalon_id("a000");
-    	mh.setMemo("After Memo");
+    	mh.setMemo("AfterMemo");
 		
 		String picName = "after_"+mh.getSalon_id()+"_"+mh.getMember_id()+"_"+cnt+".jpg";
 				

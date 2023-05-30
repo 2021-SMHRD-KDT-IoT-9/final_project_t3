@@ -31,6 +31,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.smhrd.iot.domain.Image;
 import com.smhrd.iot.domain.Mirror;
 import com.smhrd.iot.domain.MyHistory;
 import com.smhrd.iot.domain.Picture;
@@ -45,8 +46,7 @@ public class RestMirrorController {
 	@Autowired
 	private MirrorService service;
 	
-	private String fullPath;
-	private String username;
+	private int cnt = 0;
 	
 	@GetMapping("/insert")
 	public String insert(Mirror m) {
@@ -57,29 +57,59 @@ public class RestMirrorController {
 		return "success";
 	}
 	
-	// username, 사진 받아서 서버 저장 / username, 사진 저장 경로 db에 저장
-//	@PostMapping("/savepic")
-//	public String addFile(@RequestParam String username, @RequestParam MultipartFile file)
-//	throws IOException{
-//		System.out.println("username = "+ username);
-//		
-//		this.username = username; 
-//				
-//		if(!file.isEmpty()) {
-//			fullPath = "C:/Users/user/Desktop/pictest/" + file.getOriginalFilename();
-//			System.out.println("파일저장 fullPath = " + fullPath);
-//			file.transferTo(new File(fullPath));
-//				
-//			Picture p = new Picture();
-//			
-//			p.setUsername(username);
-//			p.setFullPath(fullPath);
-//			
-//			service.insertpic(m);
-//		}
-//		
-//		return "success";
-//	}
+	
+	// 이미지 저장/ db 저장
+	@PostMapping("/saveImg")
+	public String addImg(@RequestParam String imgName, @RequestParam MultipartFile file)
+	throws IOException{
+		System.out.println("imgName = "+ imgName);
+		cnt++;
+				
+		if(!file.isEmpty()) {
+			
+			Image i = new Image();
+			
+			String path = "img"+cnt;
+			
+			i.setSalon_id("a001");
+			i.setImg_id(i.getSalon_id()+"_"+path);
+			
+			String fullPath = "C:/Users/user/git/final_project_t3/SmartMirror/src/main/resources/static/img/"+i.getImg_id()+".jpg";
+			System.out.println("파일저장 fullPath = " + fullPath);
+			file.transferTo(new File(fullPath));
+			i.setImg_name(imgName);
+				
+			service.saveImg(i);
+		}
+		return "success";
+	}
+	
+	
+	// 영상 저장/ db 저장
+	@PostMapping("/saveVideo")
+	public String addVideo(@RequestParam String videoName, @RequestParam MultipartFile file)
+	throws IOException{
+		System.out.println("videoName = "+ videoName);
+		cnt++;
+				
+		if(!file.isEmpty()) {
+			
+			Video v = new Video();
+			
+			String path = "video"+cnt;
+			
+			v.setSalon_id("a001");
+			v.setVideo_id(v.getSalon_id()+"_"+path);
+			
+			String fullPath = "C:/Users/user/git/final_project_t3/SmartMirror/src/main/resources/static/video/"+v.getVideo_id()+".mp4";
+			System.out.println("파일저장 fullPath = " + fullPath);
+			file.transferTo(new File(fullPath));
+			v.setVideo_name(videoName);
+				
+			service.saveVideo(v);
+		}
+		return "success";
+	}
 	
 	
 	// 플라스크에서 스프링으로 스트링 타입 받기
@@ -143,16 +173,16 @@ public class RestMirrorController {
    
 
     // 리스트에 담아 웹 보내기
-    @CrossOrigin
-    @GetMapping("/videolist")
-    public ResponseEntity<List<Video>> getVideos(@RequestParam String query) {
-       System.out.println("Received query: " + query);
-        List<Video> videos = new ArrayList<>();
-        videos.add(new Video(1, "Video 1","https://www.youtube.com/embed/mFP7oGm-3nk"));
-        videos.add(new Video(2, "Video 2",""));
-        videos.add(new Video(3, "Video 3",""));
-        return ResponseEntity.ok(videos);
-    }
+//    @CrossOrigin
+//    @GetMapping("/videolist")
+//    public ResponseEntity<List<Video>> getVideos(@RequestParam String query) {
+//       System.out.println("Received query: " + query);
+//        List<Video> videos = new ArrayList<>();
+//        videos.add(new Video(1, "Video 1","https://www.youtube.com/embed/mFP7oGm-3nk"));
+//        videos.add(new Video(2, "Video 2",""));
+//        videos.add(new Video(3, "Video 3",""));
+//        return ResponseEntity.ok(videos);
+//    }
         
 //    @CrossOrigin
 //    @GetMapping("/image")

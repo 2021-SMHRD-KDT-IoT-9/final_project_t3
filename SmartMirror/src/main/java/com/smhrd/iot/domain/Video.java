@@ -10,8 +10,8 @@ import lombok.Setter;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Video {
-    private int id;
-    private String title;
-    private String src;
+    private String video_id;
+    private String salon_id;
+    private String video_name;
 
 }

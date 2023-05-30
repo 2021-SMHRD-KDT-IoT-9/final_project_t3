@@ -7,9 +7,11 @@ import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
 import org.springframework.http.ResponseEntity;
 
+import com.smhrd.iot.domain.Image;
 import com.smhrd.iot.domain.Mirror;
 import com.smhrd.iot.domain.MyHistory;
 import com.smhrd.iot.domain.Picture;
+import com.smhrd.iot.domain.Video;
 
 @Mapper
 public interface MirrorMapper {
@@ -23,5 +25,9 @@ public interface MirrorMapper {
 	public List<MyHistory> myHistory(String id);
 	
 	public List<MyHistory> idconfig(String id);
+	
+	public void saveImg(Image i);
+	
+	public void saveVideo(Video v);
 	
 }

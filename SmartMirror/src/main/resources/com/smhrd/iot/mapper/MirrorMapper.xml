@@ -12,5 +12,14 @@
 		on a.salon_id = b.salon_id 
 		where member_id = #{id}
 	</select>
+	
+	<insert id="saveImg" parameterType="com.smhrd.iot.domain.Image">
+		insert into image (img_id, salon_id, img_name) values (#{img_id},#{salon_id},#{img_name})
+	</insert>
+
+	<insert id="saveVideo" parameterType="com.smhrd.iot.domain.Video">
+		insert into video (video_id, salon_id, video_name) values (#{video_id},#{salon_id},#{video_name})
+	</insert>
+
 
 </mapper>

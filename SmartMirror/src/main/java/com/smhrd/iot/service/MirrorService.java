@@ -6,8 +6,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
+import com.smhrd.iot.domain.Image;
 import com.smhrd.iot.domain.Mirror;
 import com.smhrd.iot.domain.MyHistory;
+import com.smhrd.iot.domain.Video;
 import com.smhrd.iot.mapper.MirrorMapper;
 
 @Service
@@ -30,6 +32,14 @@ public class MirrorService {
 	
 	public List<MyHistory> idconfig(String id) {
 		return mapper.idconfig(id);
+	}
+	
+	public void saveImg(Image i) {
+		mapper.saveImg(i);
+	}
+	
+	public void saveVideo(Video v) {
+		mapper.saveVideo(v);
 	}
 	
 }

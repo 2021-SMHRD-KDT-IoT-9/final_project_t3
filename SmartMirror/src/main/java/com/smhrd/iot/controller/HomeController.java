@@ -7,10 +7,18 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class HomeController {
 
 	@GetMapping("/")
-	public String test() {
-		return "dbtest";
+	public String main() {
+		return "testmain";
 	}
 	
+	@GetMapping("/iup")
+	public String test() {
+		return "saveImg";
+	}
+	@GetMapping("/vup")
+	public String vup() {
+		return "saveVideo";
+	}
 
 	
 	
