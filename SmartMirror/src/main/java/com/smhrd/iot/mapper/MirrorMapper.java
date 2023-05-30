@@ -30,4 +30,8 @@ public interface MirrorMapper {
 	
 	public void saveVideo(Video v);
 	
+	public List<Video> videolist();
+
+	public List<Image> imglist();
+	
 }

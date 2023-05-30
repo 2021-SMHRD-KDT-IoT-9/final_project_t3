@@ -35,6 +35,7 @@ import com.smhrd.iot.domain.Image;
 import com.smhrd.iot.domain.Mirror;
 import com.smhrd.iot.domain.MyHistory;
 import com.smhrd.iot.domain.Picture;
+import com.smhrd.iot.domain.Salon;
 import com.smhrd.iot.domain.Video;
 import com.smhrd.iot.service.MirrorService;
 
@@ -86,31 +87,31 @@ public class RestMirrorController {
 	
 	
 	// 영상 저장/ db 저장
-	@PostMapping("/saveVideo")
-	public String addVideo(@RequestParam String videoName, @RequestParam MultipartFile file)
-	throws IOException{
-		System.out.println("videoName = "+ videoName);
-		cnt++;
-				
-		if(!file.isEmpty()) {
-			
-			Video v = new Video();
-			
-			String path = "video"+cnt;
-			
-			v.setSalon_id("a001");
-			v.setVideo_id(v.getSalon_id()+"_"+path);
-			
-			String fullPath = "C:/Users/user/git/final_project_t3/SmartMirror/src/main/resources/static/uploadvideo/"+v.getVideo_id()+".mp4";
-			System.out.println("파일저장 fullPath = " + fullPath);
-			file.transferTo(new File(fullPath));
-			v.setVideo_name(videoName);
-				
-			service.saveVideo(v);
-		}
-		return "test-success";
-	}
-	
+//	@PostMapping("/saveVideo")
+//	public String addVideo(@RequestParam String videoName, @RequestParam MultipartFile file)
+//	throws IOException{
+//		System.out.println("videoName = "+ videoName);
+//		cnt++;
+//				
+//		if(!file.isEmpty()) {
+//			
+//			Video v = new Video();
+//			
+//			String path = "video"+cnt;
+//			
+//			v.setSalon_id("a001");
+//			v.setVideo_id(v.getSalon_id()+"_"+path);
+//			
+//			String fullPath = "C:/Users/user/git/final_project_t3/SmartMirror/src/main/resources/static/uploadvideo/"+v.getVideo_id()+".mp4";
+//			System.out.println("파일저장 fullPath = " + fullPath);
+//			file.transferTo(new File(fullPath));
+//			v.setVideo_name(videoName);
+//				
+//			service.saveVideo(v);
+//		}
+//		return "test-success";
+//	}
+//	
 	
 	// 플라스크에서 스프링으로 스트링 타입 받기
 	@RequestMapping(value = "/testt", method = RequestMethod.GET)
@@ -173,17 +174,35 @@ public class RestMirrorController {
    
 
     // 리스트에 담아 웹 보내기
-//    @CrossOrigin
-//    @GetMapping("/videolist")
-//    public ResponseEntity<List<Video>> getVideos(@RequestParam String query) {
-//       System.out.println("Received query: " + query);
-//        List<Video> videos = new ArrayList<>();
-//        videos.add(new Video(1, "Video 1","https://www.youtube.com/embed/mFP7oGm-3nk"));
-//        videos.add(new Video(2, "Video 2",""));
-//        videos.add(new Video(3, "Video 3",""));
-//        return ResponseEntity.ok(videos);
-//    }
+    @CrossOrigin
+    @GetMapping("/videolist")
+    public ResponseEntity<List<Video>> videolist() {
+    	//String salon_id = "a001";
+//    	List<Video> videos = new ArrayList<>();
+//      videos.add(new Video("a001_video1", "1234"));
+//      videos.add(new Video("a001_video2", "12345"));
+//      videos.add(new Video("a001_video3", "123"));
+    	
+    	List<Video> videos = service.videolist();
+    	
+        return ResponseEntity.ok(videos);
+    }
+     
+    @CrossOrigin
+    @GetMapping("/imglist")
+    public ResponseEntity<List<Image>> imglist() {
         
+         List<Image> imgs = service.imglist();
+         
+//         imgs.add(new Video(1, "Video 1",""));
+//         imgs.add(new Video(2, "Video 2",""));
+//         imgs.add(new Video(3, "Video 3",""));
+         
+         return ResponseEntity.ok(imgs);
+     }
+        
+    
+    
 //    @CrossOrigin
 //    @GetMapping("/image")
 //    public ResponseEntity<FileSystemResource> getImage() throws IOException {

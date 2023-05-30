@@ -61,20 +61,20 @@ public class RaspController {
     
     // 라파-Spring after 사진 저장
     @PostMapping("/after")
-    public void afterPic(@RequestParam("img") MultipartFile files, @RequestParam("userId") String userId) throws IOException{
+    public void afterPic(@RequestParam("img") MultipartFile files, @RequestParam("text") String text) throws IOException{
     	cnt++;
-    	    	
+    	
     	byte [] imgData = files.getBytes();
     	String fileName = files.getOriginalFilename();
     	//System.out.println("파일 확인 : "+Arrays.toString(imgData));
     	System.out.println("원본이름 : "+fileName);
-    	System.out.println("userId : "+userId);
+    	System.out.println("userId : "+text);
 		MyHistory mh = new MyHistory();
 		
-		mh.setMember_id(userId);
+		mh.setMember_id(text);
 		mh.setSalon_id("a000");
     	mh.setMemo("AfterMemo");
-		
+    	
 		String picName = "after_"+mh.getSalon_id()+"_"+mh.getMember_id()+"_"+cnt+".jpg";
 				
     	String src = "C:/Users/user/git/final_project_t3/SmartMirror/src/main/resources/static/afterImg/"+picName;
@@ -94,6 +94,5 @@ public class RaspController {
     		System.out.println("이미지 저장 오류"+e.getMessage());
 		}
     }
-	
 	
 }

@@ -7,11 +7,11 @@ import lombok.Setter;
 
 @Getter
 @Setter
-@NoArgsConstructor
 @AllArgsConstructor
-public class Video {
-    private String video_id;
-    private String video_name;
-
+@NoArgsConstructor
+public class Salon {
+	
+	private String salon_id;
+	private String salon_name;
+	private String address;
 }
-

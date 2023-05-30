@@ -42,4 +42,12 @@ public class MirrorService {
 		mapper.saveVideo(v);
 	}
 	
+	public List<Video> videolist() {
+		return mapper.videolist();
+	}
+	
+	public List<Image> imglist(){
+		return mapper.imglist();
+	}
+	
 }

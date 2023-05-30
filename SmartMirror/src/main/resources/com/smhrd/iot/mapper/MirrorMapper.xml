@@ -21,5 +21,12 @@
 		insert into video (video_id, salon_id, video_name) values (#{video_id},#{salon_id},#{video_name})
 	</insert>
 
+	<select id="videolist" resultType="com.smhrd.iot.domain.Video">
+		select video_id, video_name from video
+	</select>
+
+	<select id="imglist" resultType="com.smhrd.iot.domain.Image">
+		select img_id, img_name from image
+	</select>
 
 </mapper>
