@@ -7,6 +7,7 @@ import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
 import org.springframework.http.ResponseEntity;
 
+import com.smhrd.iot.domain.HairStyle;
 import com.smhrd.iot.domain.Image;
 import com.smhrd.iot.domain.Mirror;
 import com.smhrd.iot.domain.MyHistory;
@@ -33,5 +34,18 @@ public interface MirrorMapper {
 	public List<Video> videolist();
 
 	public List<Image> imglist();
+	
+	// 관리자 - 스타일 관리 
+	public List<HairStyle> hairManager();
+	
+	// 관리자 - 동영상 
+	public List<Video> videoManager();
+	
+	// 관리자 - 이미지 
+	public List<Image> imageManager();
+	
+	// 관리자 - 등록스타일 
+	public List<HairStyle> hairYesManager();
+	
 	
 }

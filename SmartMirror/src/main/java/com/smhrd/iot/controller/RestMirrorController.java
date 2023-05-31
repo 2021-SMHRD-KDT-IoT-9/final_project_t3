@@ -154,7 +154,7 @@ public class RestMirrorController {
 		
 	// 이미지 파일 명 웹 리턴
     @CrossOrigin
-    @GetMapping("/test")
+    @GetMapping("/imgtest")
     public ResponseEntity<String> getData() {
         String data = "img01";
         return ResponseEntity.ok(data);
@@ -215,6 +215,8 @@ public class RestMirrorController {
 //                    .body(imageResource);
 //        }
 
+    
+    
     
     
     

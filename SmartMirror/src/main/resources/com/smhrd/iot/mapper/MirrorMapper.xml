@@ -29,4 +29,31 @@
 		select img_id, img_name from image
 	</select>
 
+	<!-- 관리자 - 헤어스타일 관리 -->
+	<select id="hairManager" resultType="com.smhrd.iot.domain.HairStyle">
+		select b.hair_img_path ,a.style_name, a.cut_day, b.img_show
+		from hair_style a inner join hair_style_img b 
+		on a.hair_id = b.hair_id
+	</select>
+	
+	<!-- 관리자 - 동영상 관리 -->
+	<select id="videoManager" resultType="com.smhrd.iot.domain.Video">
+		select video_id, video_name from video
+	</select>
+	
+	<!-- 관리자 - 이미지 관리 -->
+	<select id="imageManager" resultType="com.smhrd.iot.domain.Image">
+		select img_id, img_name from image
+	</select>
+	
+	<!-- 관리자 - 등록스타일 -->
+	<select id="hairYesManager" resultType="com.smhrd.iot.domain.HairStyle">
+		select b.hair_img_path ,a.style_name, a.cut_day
+  		  from hair_style a
+ 		 inner join hair_style_img b
+   			on a.hair_id = b.hair_id
+ 		where b.img_show = 'Y';
+	</select>
+
+
 </mapper>

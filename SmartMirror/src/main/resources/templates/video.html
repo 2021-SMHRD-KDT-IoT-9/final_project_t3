@@ -2,96 +2,51 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="main.css">
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+<link rel="stylesheet" href="/css/main.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
 </head>
 
 <body>
-    <div class="title">
-        <a href="main.html">
-            <img src="/img/logo.png" />
-        </a>
-        <ul>
-            <a href="video.html">
-                <li>동영상 관리</li>
-            </a>
-            <a href="image.html">
-                <li>이미지 관리</li>
-            </a>
-            <a href="style.html">
-                <li>스타일 관리</li>
-            </a>
-            <a href="hair.html">
-                <li>등록 스타일 보기</li>
-            </a>
-        </ul>
-    </div>
+	<div class="title">
+		<a href="/main"> <img src="/img/logo.png" />
+		</a>
+		<ul>
+			<a href="/video">
+				<li>동영상 관리</li>
+			</a>
+			<a href="/image">
+				<li>이미지 관리</li>
+			</a>
+			<a href="/style">
+				<li>스타일 관리</li>
+			</a>
+			<a href="/hair">
+				<li>등록 스타일 보기</li>
+			</a>
+		</ul>
+	</div>
+	<div class="videolist">
+		<h1>비디오 리스트</h1>
+		<div class="logoset" id="videoList"></div>
+	</div>
+	<script src="js/video.js"></script>
+	<script>
+    $(document).ready(() => {
+    	video_Manager();
+    });  
+    </script>
 
 
-    <div class="videolist">
 
-        <h1>비디오 리스트</h1>
 
-        <div class="logoset">
-            <div class="logostyle">
-                <img src="/img/pngegg.png" width="100px" height="100px" />
-                <p>아이언맨 </p>
-                <span>삭제하기❌</span>
-            </div>
-
-            <div class="logostyle">
-                <img src="/img/pngegg.png" width="100px" height="100px" />
-                <p>캡틴 아메리카</p>
-                <span>삭제하기❌</span>
-            </div>
-
-            <div class="logostyle">
-                <img src="/img/pngegg.png" width="100px" height="100px" />
-                <p>헐크</p>
-                <span>삭제하기❌</span>
-            </div>
-            <div class="logostyle">
-                <img src="/img/pngegg.png" width="100px" height="100px" />
-                <p>토르</p>
-                <span>삭제하기❌</span>
-            </div>
-            <div class="logostyle">
-                <img src="/img/pngegg.png" width="100px" height="100px" />
-                <p>어벤져스</p>
-                <span>삭제하기❌</span>
-            </div>
-
-        </div>
-
-        <div style="margin-top: 30px;">
-            <input type="file" id="uploadBtn">
-            영상 이름 설정 :
-            <input type="text" id="videoName">
-            <button onclick="uploadFile()" class="btn-gradient">업로드</button>
-        </div>
-    </div>
-    </div>
 
 </body>
 
-<script>
-    function uploadFile() {
-        const input = document.getElementById("uploadBtn");
-        const videoName = document.getElementById("videoName")
-        const file = input.files[0]; // 선택된 파일 가져오기
-
-        if (file) {
-            // 파일 업로드 처리 로직을 여기에 작성합니다.
-            console.log("Selected file:", file);
-            // 파일 업로드 로직을 작성할 수 있습니다.
-            // 예를 들어, 서버로 파일을 전송하거나 다른 처리를 수행할 수 있습니다.
-        } else {
-            console.log("No file selected.");
-        }
-    }
-</script>
 
 </html>

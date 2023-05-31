@@ -13,11 +13,12 @@ import lombok.Setter;
 @NoArgsConstructor
 @AllArgsConstructor
 @RequiredArgsConstructor
-public class Image {
+public class HairStyle {
 	@Nonnull
-	private String img_id;
-	private String salon_id;
+	private String hair_img_path; 
 	@Nonnull
-	private String img_name; 
-	
+	private String style_name;
+	@Nonnull
+	private String cut_day; 
+	private String img_show;  
 }

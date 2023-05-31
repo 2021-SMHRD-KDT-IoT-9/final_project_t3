@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
+import com.smhrd.iot.domain.HairStyle;
 import com.smhrd.iot.domain.Image;
 import com.smhrd.iot.domain.Mirror;
 import com.smhrd.iot.domain.MyHistory;
@@ -49,5 +50,23 @@ public class MirrorService {
 	public List<Image> imglist(){
 		return mapper.imglist();
 	}
+	
+	// 관리자 - 스타일
+	public List<HairStyle> hairManager() {
+		return mapper.hairManager();
+	}
+	// 관리자 - 비디오 
+	public List<Video> videoManager(){
+		return mapper.videoManager();
+	}
+	// 관리자 - 이미지 
+	public List<Image> imageManager(){
+		return mapper.imageManager();
+	}
+	// 관리자 - 등록 스타일 
+	public List<HairStyle> hairYesManager(){
+		return mapper.hairYesManager();
+	}
+	
 	
 }
