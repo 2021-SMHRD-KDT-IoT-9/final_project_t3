@@ -67,6 +67,11 @@ public class MirrorService {
 	public List<HairStyle> hairYesManager(){
 		return mapper.hairYesManager();
 	}
+	// 관리자 - 이미지 삭제 
+	public void imgDelete(String id) {
+		int cnt = mapper.imgDelete(id);
+		System.out.println("삭제 성공"+cnt);
+	}
 	
 	
 }

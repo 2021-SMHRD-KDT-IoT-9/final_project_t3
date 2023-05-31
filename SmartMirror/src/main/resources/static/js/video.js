@@ -20,8 +20,9 @@ function videoView(data) {
 		result += "Your browser does not support the video tag.";
 		result += "</video>";
 		result += "<p>" + vo.video_name + "</p>";
-		result += "<span>삭제하기❌</span>";
+		result += "<span style='background-color:burlyWood' onclick='videoDelete(\"" + vo.video_name + "\")'>삭제하기❌</span>";
 		result += "</div>";
+		console.log(vo);
 	});
 	result += "<div style='margin-top: 30px;'>";
 	result += "<input type='file' id='uploadBtn'>영상 이름 설정 :";
@@ -31,16 +32,43 @@ function videoView(data) {
 	$("#videoList").html(result);
 }
 
+function videoDelete(name) {
+	console.log("삭제 클릭", name)
+	$.ajax({
+		url: "videodelete",
+		type: "get",
+		data: { "name": name },
+		success: function() {
+			console.log("통신 성공")
+		},
+		error: function() {
+			alert("통신실패!")
+		}
+	})
+}
+
 function uploadFile() {
 	const input = document.getElementById("uploadBtn");
-	const videoName = document.getElementById("videoName")
+	const videoName = document.getElementById("videoName").value;
 	const file = input.files[0]; // 선택된 파일 가져오기
-
 	if (file) {
-		// 파일 업로드 처리 로직을 여기에 작성합니다.
 		console.log("Selected file:", file);
-		// 파일 업로드 로직을 작성할 수 있습니다.
-		// 예를 들어, 서버로 파일을 전송하거나 다른 처리를 수행할 수 있습니다.
+		const formData = new FormData();
+		formData.append("name", videoName);
+		formData.append("file", file);
+		$.ajax({
+			url: "videoupload",
+			type: "post",
+			data: formData,
+			contentType: false,
+			processData: false,
+			success: function() {
+				console.log("통신 성공")
+			},
+			error: function() {
+				alert("통신실패!")
+			}
+		});
 	} else {
 		console.log("No file selected.");
 	}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+<link rel="stylesheet" href="/css/main.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+</head>
+
+<body>
+	<div class="title">
+		<a href="/main"> <img src="/img/logo.png" />
+		</a>
+		<ul>
+			<a href="/video">
+				<li>동영상 관리</li>
+			</a>
+			<a href="/image">
+				<li>이미지 관리</li>
+			</a>
+			<a href="/style">
+				<li>스타일 관리</li>
+			</a>
+			<a href="/hair">
+				<li>등록 스타일 보기</li>
+			</a>
+		</ul>
+	</div>
+
+	<div class="videolist">
+		<h1>저장된 헤어스타일</h1>
+		<div class="logoset" id="styleList"></div>
+	</div>
+
+	<script src="js/main.js"></script>
+	<script>
+    $(document).ready(() => {
+      hair_Manager();
+    });
+ </script>
+
+</body>
+
+
+</html>

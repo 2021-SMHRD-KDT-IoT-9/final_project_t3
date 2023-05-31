@@ -2,6 +2,7 @@ package com.smhrd.iot.mapper;
 
 import java.util.List;
 
+import org.apache.ibatis.annotations.Delete;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
@@ -46,6 +47,10 @@ public interface MirrorMapper {
 	
 	// 관리자 - 등록스타일 
 	public List<HairStyle> hairYesManager();
+	
+	// 관리자 - 이미지 삭제 
+	@Delete("delete from image where img_id = #{id}")
+	public int imgDelete(String id);
 	
 	
 }

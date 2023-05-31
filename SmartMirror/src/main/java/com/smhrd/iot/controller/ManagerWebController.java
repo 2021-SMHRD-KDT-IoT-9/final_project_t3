@@ -1,10 +1,16 @@
 package com.smhrd.iot.controller;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RequestPart;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.multipart.MultipartFile;
 
 import com.smhrd.iot.domain.HairStyle;
 import com.smhrd.iot.domain.Image;
@@ -16,6 +22,8 @@ public class ManagerWebController {
 
 	@Autowired
 	private MirrorService service;
+	
+	private int cnt = 4;
 	
     // 관리자 페이지 - 스타일 관리
     @PostMapping("/hairmanager")
@@ -40,4 +48,47 @@ public class ManagerWebController {
     public List<HairStyle> hairYesManager(){
     	return service.hairYesManager();
     }
+    
+    // 동영상 삭제 
+    @GetMapping("/videodelete")
+    public void videoDelete(@RequestParam("name") String name) {
+    	System.out.println(name);
+    }
+    
+    // 동영상 저장
+    @PostMapping("/videoupload")
+    public void videoUpload(@RequestParam("name") String name, @RequestPart("file") MultipartFile file) {
+        // name과 file을 사용하여 업로드된 파일 처리
+        // 예: 파일 저장, 데이터베이스에 정보 저장 등
+        System.out.println("Name: " + name);
+        System.out.println("File Name: " + file.getOriginalFilename());
+        System.out.println("File Size: " + file.getSize());
+    }
+    // 이미지 삭제 
+    @GetMapping("imgdelete")
+    public void imgDelete(@RequestParam("id") String id) {
+    	System.out.println(id);
+    	service.imgDelete(id);
+    }
+    // 이미지 저장
+    @PostMapping("/imgupload")
+    public void imgUpload(@RequestParam("name") String name, @RequestPart("file") MultipartFile file) throws IOException {	
+        if (!file.isEmpty()) {
+        	cnt++; 
+            Image i = new Image();
+            String path = "img" + cnt;
+            i.setSalon_id("a001");
+            i.setImg_id(i.getSalon_id() + "_" + path);
+            String fullPath = "C:/Users/user/git/final_project_t3/SmartMirror/src/main/resources/static/uploadimg/" + i.getImg_id() + ".jpg";
+            System.out.println("파일저장 fullPath = " + fullPath);
+            file.transferTo(new File(fullPath));
+            i.setImg_name(name);
+            service.saveImg(i);
+                            
+        }
+       
+    }
+
+    
+    
 }

@@ -16,30 +16,59 @@ function imgView(data) {
 	var result = "<div class='logoset' id='imgList'>";
 	$.each(data, (index, vo) => {
 		result += "<div class='logostyle'>";
-		result += "<img src='/uploadimg/"+vo.img_id+".jpg' width='146px' height='81px'/>";
-		result += "<p>"+vo.img_name+"</p>";
-		result += "<span>삭제하기❌</span>";
+		result += "<img src='/uploadimg/" + vo.img_id + ".jpg' width='146px' height='81px'/>";
+		result += "<p>" + vo.img_name + "</p>";
+		result += "<span style='background-color:burlyWood' onclick='imgDelete(\"" + vo.img_id + "\")'>삭제하기❌</span>";
 		result += "</div>";
 	});
 	result += "<div style='margin-top: 30px;'>";
-	result += "<input type='file' id='uploadBtn'>이미지 이름 설정:"; 
-	result += "<input type='text' id='videoName'>"; 
-	result += "<button onclick='uploadFile()' class='btn-gradient'>업로드</button>"; 
-	result += "</div>"; 
+	result += "<input type='file' id='uploadBtn'>이미지 이름 설정:";
+	result += "<input type='text' id='imgName'>";
+	result += "<button onclick='uploadFile()' class='btn-gradient'>업로드</button>";
 	result += "</div>";
-	$("#imgList").html(result); 
+	result += "</div>";
+	$("#imgList").html(result);
 }
+function imgDelete(id){
+	console.log(name)
+	$.ajax({
+		url: "imgdelete",
+		type: "get",
+		data: {"id": id },
+		success: function() {
+			console.log("통신 성공")
+			location.reload();
+		},
+		error: function() {
+			alert("통신실패!")
+		}
+	})
+}
+
 
 function uploadFile() {
 	const input = document.getElementById("uploadBtn");
-	const videoName = document.getElementById("videoName")
+	const imgName = document.getElementById("imgName").value;
 	const file = input.files[0]; // 선택된 파일 가져오기
-
 	if (file) {
-		// 파일 업로드 처리 로직을 여기에 작성합니다.
 		console.log("Selected file:", file);
-		// 파일 업로드 로직을 작성할 수 있습니다.
-		// 예를 들어, 서버로 파일을 전송하거나 다른 처리를 수행할 수 있습니다.
+		const formData = new FormData();
+		formData.append("name", imgName);
+		formData.append("file", file);
+		$.ajax({
+			url: "imgupload",
+			type: "post",
+			data: formData,
+			contentType: false,
+			processData: false,
+			success: function() {
+				console.log("통신 성공")
+				location.reload();
+			},
+			error: function() {
+				alert("통신실패!")
+			}
+		})
 	} else {
 		console.log("No file selected.");
 	}

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.smhrd.iot.mapper.MirrorMapper"> 
+
+	<select id="myHistory" resultType="com.smhrd.iot.domain.MyHistory">
+		select * from my_history where member_id = #{id}
+	</select>
+
+	<select id="idconfig" resultType="com.smhrd.iot.domain.MyHistory">
+		select b.member_id,b.cut_dy,a.salon_name,b.pic_path,b.memo
+		from salon_info as a left join my_history as b
+		on a.salon_id = b.salon_id 
+		where member_id = #{id}
+	</select>
+	
+	<insert id="saveImg" parameterType="com.smhrd.iot.domain.Image">
+		insert into image (img_id, salon_id, img_name) values (#{img_id},#{salon_id},#{img_name})
+	</insert>
+
+	<insert id="saveVideo" parameterType="com.smhrd.iot.domain.Video">
+		insert into video (video_id, salon_id, video_name) values (#{video_id},#{salon_id},#{video_name})
+	</insert>
+
+	<select id="videolist" resultType="com.smhrd.iot.domain.Video">
+		select video_id, video_name from video
+	</select>
+
+	<select id="imglist" resultType="com.smhrd.iot.domain.Image">
+		select img_id, img_name from image
+	</select>
+
+	<!-- 관리자 - 헤어스타일 관리 -->
+	<select id="hairManager" resultType="com.smhrd.iot.domain.HairStyle">
+		select b.hair_img_path ,a.style_name, a.cut_day, b.img_show
+		from hair_style a inner join hair_style_img b 
+		on a.hair_id = b.hair_id
+	</select>
+	
+	<!-- 관리자 - 동영상 관리 -->
+	<select id="videoManager" resultType="com.smhrd.iot.domain.Video">
+		select video_id, video_name from video
+	</select>
+	
+	<!-- 관리자 - 이미지 관리 -->
+	<select id="imageManager" resultType="com.smhrd.iot.domain.Image">
+		select img_id, img_name from image
+	</select>
+	
+	<!-- 관리자 - 등록스타일 -->
+	<select id="hairYesManager" resultType="com.smhrd.iot.domain.HairStyle">
+		select b.hair_img_path ,a.style_name, a.cut_day
+  		  from hair_style a
+ 		 inner join hair_style_img b
+   			on a.hair_id = b.hair_id
+ 		where b.img_show = 'Y';
+	</select>
+
+
+</mapper>
