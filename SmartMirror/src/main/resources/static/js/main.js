@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // 관리자 - 스타일 관리
 function hair_Manager() {
 	$.ajax({
@@ -69,5 +68,4 @@ function submitSettings(button) {
 	var exposureInput = settingDiv.querySelector(".exposure-input");
 	// 여기에서 설정 값을 처리하거나 서버로 전송할 수 있습니다.
 }
-
 
