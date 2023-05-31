@@ -86,32 +86,32 @@ public class RestMirrorController {
 	}
 	
 	
-	// 영상 저장/ db 저장
-//	@PostMapping("/saveVideo")
-//	public String addVideo(@RequestParam String videoName, @RequestParam MultipartFile file)
-//	throws IOException{
-//		System.out.println("videoName = "+ videoName);
-//		cnt++;
-//				
-//		if(!file.isEmpty()) {
-//			
-//			Video v = new Video();
-//			
-//			String path = "video"+cnt;
-//			
-//			v.setSalon_id("a001");
-//			v.setVideo_id(v.getSalon_id()+"_"+path);
-//			
-//			String fullPath = "C:/Users/user/git/final_project_t3/SmartMirror/src/main/resources/static/uploadvideo/"+v.getVideo_id()+".mp4";
-//			System.out.println("파일저장 fullPath = " + fullPath);
-//			file.transferTo(new File(fullPath));
-//			v.setVideo_name(videoName);
-//				
-//			service.saveVideo(v);
-//		}
-//		return "test-success";
-//	}
-//	
+	 //영상 저장/ db 저장
+	@PostMapping("/saveVideo")
+	public String addVideo(@RequestParam String videoName, @RequestParam MultipartFile file)
+	throws IOException{
+		System.out.println("videoName = "+ videoName);
+		cnt++;
+				
+		if(!file.isEmpty()) {
+			
+			Video v = new Video();
+			
+			String path = "video"+cnt;
+			
+			v.setSalon_id("a001");
+			v.setVideo_id(v.getSalon_id()+"_"+path);
+			
+			String fullPath = "C:/Users/user/git/final_project_t3/SmartMirror/src/main/resources/static/uploadvideo/"+v.getVideo_id()+".mp4";
+			System.out.println("파일저장 fullPath = " + fullPath);
+			file.transferTo(new File(fullPath));
+			v.setVideo_name(videoName);
+				
+			service.saveVideo(v);
+		}
+		return "test-success";
+	}
+	
 	
 	// 플라스크에서 스프링으로 스트링 타입 받기
 	@RequestMapping(value = "/testt", method = RequestMethod.GET)
