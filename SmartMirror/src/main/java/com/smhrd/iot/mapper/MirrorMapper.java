@@ -23,6 +23,9 @@ public interface MirrorMapper {
 	
 	@Insert("insert into my_history (member_id, salon_id, pic_path) values (#{member_id},#{salon_id},#{pic_path})")
 	public void insertpic(MyHistory mh);
+	
+	@Insert("insert into video (video_id, salon_id, video_name) values (#{video_id},#{salon_id},#{video_name}) ")
+	public void insertvideo(Video v);
 
 	public List<MyHistory> myHistory(String id);
 	
@@ -51,6 +54,10 @@ public interface MirrorMapper {
 	// 관리자 - 이미지 삭제 
 	@Delete("delete from image where img_id = #{id}")
 	public int imgDelete(String id);
+	
+	//관리자 - 동영상 삭제
+	@Delete("delete from video where video_id=#{id}")
+	public int videoDelete(String id);
 	
 	
 }

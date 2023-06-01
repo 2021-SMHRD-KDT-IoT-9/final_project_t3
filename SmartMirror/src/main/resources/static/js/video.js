@@ -20,7 +20,7 @@ function videoView(data) {
 		result += "Your browser does not support the video tag.";
 		result += "</video>";
 		result += "<p>" + vo.video_name + "</p>";
-		result += "<span style='background-color:burlyWood' onclick='videoDelete(\"" + vo.video_name + "\")'>삭제하기❌</span>";
+		result += "<span style='background-color:burlyWood' onclick='videoDelete(\"" + vo.video_id + "\")'>삭제하기❌</span>";
 		result += "</div>";
 		console.log(vo);
 	});
@@ -32,13 +32,14 @@ function videoView(data) {
 	$("#videoList").html(result);
 }
 
-function videoDelete(name) {
-	console.log("삭제 클릭", name)
+function videoDelete(id) {
+	console.log("삭제 클릭", id)
 	$.ajax({
 		url: "videodelete",
 		type: "get",
-		data: { "name": name },
+		data: { "id": id },
 		success: function() {
+			location.reload();
 			console.log("통신 성공")
 		},
 		error: function() {
@@ -63,6 +64,7 @@ function uploadFile() {
 			contentType: false,
 			processData: false,
 			success: function() {
+				location.reload();
 				console.log("통신 성공")
 			},
 			error: function() {
