@@ -27,6 +27,11 @@ public class MirrorService {
 		mapper.insertpic(mh);
 	}
 	
+	public void insertvideo(Video v) {
+		mapper.insertvideo(v);
+	}
+	
+	
 	public List<MyHistory> myHistory (String id){
 		return mapper.myHistory(id);
 	}
@@ -70,6 +75,11 @@ public class MirrorService {
 	// 관리자 - 이미지 삭제 
 	public void imgDelete(String id) {
 		int cnt = mapper.imgDelete(id);
+		System.out.println("삭제 성공"+cnt);
+	}
+	// 관리자 - 동영상 삭제 YG
+	public void videoDelete(String name) {
+		int cnt = mapper.videoDelete(name);
 		System.out.println("삭제 성공"+cnt);
 	}
 	

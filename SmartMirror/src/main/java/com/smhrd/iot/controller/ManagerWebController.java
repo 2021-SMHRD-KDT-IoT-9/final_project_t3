@@ -24,6 +24,7 @@ public class ManagerWebController {
 	private MirrorService service;
 	
 	private int cnt = 4;
+	private int cnt2 = 5;
 	
     // 관리자 페이지 - 스타일 관리
     @PostMapping("/hairmanager")
@@ -44,33 +45,48 @@ public class ManagerWebController {
     }
     
     // 관리자 - 등록 스타일 
-    @PostMapping("hairsaveyes")
+    @PostMapping("/hairsaveyes")
     public List<HairStyle> hairYesManager(){
     	return service.hairYesManager();
     }
     
-    // 동영상 삭제 
+    // 동영상 삭제 YG
     @GetMapping("/videodelete")
     public void videoDelete(@RequestParam("name") String name) {
     	System.out.println(name);
+    	service.videoDelete(name);
     }
     
-    // 동영상 저장
+    // 동영상 저장 YG 
     @PostMapping("/videoupload")
-    public void videoUpload(@RequestParam("name") String name, @RequestPart("file") MultipartFile file) {
+    public void videoUpload(@RequestParam("name") String name, @RequestPart("file") MultipartFile file)throws IOException {	 {
         // name과 file을 사용하여 업로드된 파일 처리
         // 예: 파일 저장, 데이터베이스에 정보 저장 등
         System.out.println("Name: " + name);
         System.out.println("File Name: " + file.getOriginalFilename());
         System.out.println("File Size: " + file.getSize());
+       if(!file.isEmpty()) {
+    	   cnt2++;
+    	   Video v = new Video();
+    	   String path = "video"+cnt2;
+    	   v.setSalon_id("a001");
+    	   v.setVideo_id(v.getSalon_id()+"_"+path);
+    	   String fullPath="C:/Users/user/git/final_project_t3/SmartMirror/src/main/resources/static/uploadvideo/"+ v.getVideo_id()+".MP4";
+    	   System.out.println("파일저장 fullpath="+ fullPath);
+    	   file.transferTo(new File(fullPath));
+    	   v.setVideo_name(name);
+    	   service.saveVideo(v);
+          }
+       }
     }
-    // 이미지 삭제 
-    @GetMapping("imgdelete")
+     
+    // 이미지 삭제 1 YG
+    @GetMapping("/imgdelete")
     public void imgDelete(@RequestParam("id") String id) {
     	System.out.println(id);
     	service.imgDelete(id);
     }
-    // 이미지 저장
+    // 이미지 저장 2
     @PostMapping("/imgupload")
     public void imgUpload(@RequestParam("name") String name, @RequestPart("file") MultipartFile file) throws IOException {	
         if (!file.isEmpty()) {
@@ -83,12 +99,13 @@ public class ManagerWebController {
             System.out.println("파일저장 fullPath = " + fullPath);
             file.transferTo(new File(fullPath));
             i.setImg_name(name);
-            service.saveImg(i);
-                            
+            service.saveImg(i);                  
         }
-       
     }
-
-    
-    
+    //Style 스타일명 이름 바꾸기! 3
+    @PostMapping("/styleupload")
+    public void styleupload(@RequestParam("name")String name,@RequestPart("file") MultipartFile file) throws IOException {
+    	
+    }
+    //Style 노출여부 N시 안보이기
 }

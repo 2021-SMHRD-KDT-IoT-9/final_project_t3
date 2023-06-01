@@ -39,6 +39,7 @@ function videoDelete(name) {
 		type: "get",
 		data: { "name": name },
 		success: function() {
+			location.reload();
 			console.log("통신 성공")
 		},
 		error: function() {
@@ -63,6 +64,7 @@ function uploadFile() {
 			contentType: false,
 			processData: false,
 			success: function() {
+				location.reload();
 				console.log("통신 성공")
 			},
 			error: function() {
