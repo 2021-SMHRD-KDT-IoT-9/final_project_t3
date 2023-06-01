@@ -59,7 +59,7 @@ public class RestMirrorController {
 	}
 	
 	
-	// 이미지 저장/ db 저장
+	// 이미지 저장 / db 저장
 	@PostMapping("/saveImg")
 	public String addImg(@RequestParam String imgName, @RequestParam MultipartFile file)
 	throws IOException{
