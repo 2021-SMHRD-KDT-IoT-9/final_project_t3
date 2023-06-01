@@ -4,6 +4,8 @@ import java.io.File;
 import java.io.IOException;
 import java.util.List;
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -23,7 +25,8 @@ public class ManagerWebController {
 	@Autowired
 	private MirrorService service;
 	
-	private int cnt = 4;
+	@Autowired
+	private HttpSession session;
 	
     // 관리자 페이지 - 스타일 관리
     @PostMapping("/hairmanager")
@@ -66,15 +69,27 @@ public class ManagerWebController {
     }
     // 이미지 삭제 
     @GetMapping("imgdelete")
-    public void imgDelete(@RequestParam("id") String id) {
-    	System.out.println(id);
+    public void imgDelete(@RequestParam("id") String id) {    	
     	service.imgDelete(id);
+    	
+    	Integer cnt = (Integer) session.getAttribute("cnt");
+    	cnt--;
+    	System.out.println(cnt);
+    	session.setAttribute("cnt", cnt);
     }
     // 이미지 저장
     @PostMapping("/imgupload")
     public void imgUpload(@RequestParam("name") String name, @RequestPart("file") MultipartFile file) throws IOException {	
-        if (!file.isEmpty()) {
-        	cnt++; 
+       Integer cnt = (Integer) session.getAttribute("cnt");
+       if(cnt == null) {
+    	   cnt = 0;
+       }
+    	
+    	if (!file.isEmpty()) {
+        	System.out.println(cnt);
+        	cnt++;
+        	session.setAttribute("cnt", cnt);
+        	
             Image i = new Image();
             String path = "img" + cnt;
             i.setSalon_id("a001");
@@ -83,8 +98,7 @@ public class ManagerWebController {
             System.out.println("파일저장 fullPath = " + fullPath);
             file.transferTo(new File(fullPath));
             i.setImg_name(name);
-            service.saveImg(i);
-                            
+            service.saveImg(i);              
         }
        
     }

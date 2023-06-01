@@ -29,7 +29,7 @@
 		select img_id, img_name from image
 	</select>
 
-	<!-- 관리자 - 헤어스타일 관리 -->
+	<!-- 관리자 - 헤어스타일 관리 - 1.이미지 경로 2. 이미지 이름 3. 컷 날짜 4. 노출 여부-->
 	<select id="hairManager" resultType="com.smhrd.iot.domain.HairStyle">
 		select b.hair_img_path ,a.style_name, a.cut_day, b.img_show
 		from hair_style a inner join hair_style_img b 
