@@ -59,5 +59,6 @@ public interface MirrorMapper {
 	@Delete("delete from video where video_id=#{id}")
 	public int videoDelete(String id);
 	
-	
+	// 안드로이드 
+	public List<HairStyle> allStyle(String id);
 }

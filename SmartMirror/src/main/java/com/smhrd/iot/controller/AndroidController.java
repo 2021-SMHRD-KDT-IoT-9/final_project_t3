@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.smhrd.iot.domain.HairStyle;
 import com.smhrd.iot.domain.MyHistory;
 import com.smhrd.iot.service.MirrorService;
 
@@ -25,7 +26,7 @@ public class AndroidController {
 		System.out.println(id);
 		List<MyHistory> list = service.idconfig(id);
 		System.out.println(list.get(0).getSalon_name());
-		return ResponseEntity.ok(service.idconfig(id));
+		return ResponseEntity.ok(list);
 	}
 	
     // MyHistory테이블 id값으로 조회
@@ -33,8 +34,19 @@ public class AndroidController {
     @GetMapping("/myhistory")
     public ResponseEntity<List<MyHistory>> myHistory(@RequestParam String query) {
        System.out.println("Received id: " + query);
-       System.out.println(service.myHistory(query));
-       return ResponseEntity.ok(service.myHistory(query));
+       List<MyHistory> list = service.myHistory(query);
+       System.out.println(list.get(0));
+       return ResponseEntity.ok(list);
+    }
+    
+    // allStyle view
+    @GetMapping("/and/allStyle")
+    public ResponseEntity<List<HairStyle>> allStyle(@RequestParam("id")String id) {
+    	System.out.println(id);
+    	List<HairStyle> list = service.allStyle(id);
+    	System.out.println("allStyle : "+list.get(0).getStyle_name());
+    	return ResponseEntity.ok(list);
+    	
     }
     
     

@@ -81,5 +81,9 @@ public class MirrorService {
 		mapper.videoDelete(id);
 	}
 	
+	// 안드로이드
+	public List<HairStyle> allStyle(String id){
+		return mapper.allStyle(id);
+	}
 	
 }
