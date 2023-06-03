@@ -9,8 +9,10 @@ import javax.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RequestPart;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -149,15 +151,35 @@ public class ManagerWebController {
 			file.transferTo(new File(fullPath));
 			i.setImg_name(name);
 			service.saveImg(i);
-
 		}
 	}
 
-	// Style 스타일명 이름 바꾸기!
-	@PostMapping("/styleupload")
-	public void styleupload(@RequestParam("name") String name, @RequestPart("file") MultipartFile file)
-			throws IOException {
-
-	}
+	// Style 스타일명 이름 바꾸기! YG2
+	  @PostMapping("/styleupload")
+	  public void styleupload(@RequestParam("index") int index,
+	                          @RequestParam("newStyleName") String newStyleName,
+	                          @RequestParam("newExposure") String newExposure) {
+	    System.out.println("index: " + index);
+	    int sequence=index;
+	    System.out.println("newStyleName: " + newStyleName);
+	    String style_name=newStyleName;
+	    System.out.println("newExposure: " + newExposure);
+	    String img_show=newExposure;
+	    HairStyle h=new HairStyle();
+	    if(newStyleName!=null) {
+	    	h.setStyle_name(style_name);
+	    	h.setSequence(sequence);
+	    	System.out.println(style_name);
+	    	System.out.println(sequence);
+	    	service.hairIndexManager(style_name,sequence);
+	    }
+	    if(newExposure!=null) {
+	    	h.setImg_show(img_show);
+	    	h.setSequence(sequence);
+	    	System.out.println(img_show);
+	    	System.out.println(sequence);
+	    	service.hairIndexManager2(img_show, sequence);
+	    }
+	  }
 
 }

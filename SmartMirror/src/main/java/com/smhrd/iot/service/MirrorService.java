@@ -86,4 +86,16 @@ public class MirrorService {
 		return mapper.allStyle(id);
 	}
 	
+	//YG2 각각의 헤어스타일 노출여부, 이름바꾸기용
+	public void hairIndexManager(String style_name,int sequence){
+		System.out.println("service"+style_name);
+		System.out.println(sequence);
+		 mapper.hairIndexManager(style_name,sequence);	
+		}
+	public void hairIndexManager2(String img_show,int sequence){
+		System.out.println("service"+sequence);
+		System.out.println(img_show);
+		 mapper.hairIndexManager2(img_show,sequence);	
+		}
+	
 }

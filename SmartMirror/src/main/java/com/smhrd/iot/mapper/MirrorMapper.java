@@ -6,6 +6,7 @@ import org.apache.ibatis.annotations.Delete;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
+import org.apache.ibatis.annotations.Update;
 import org.springframework.http.ResponseEntity;
 
 import com.smhrd.iot.domain.HairStyle;
@@ -61,4 +62,11 @@ public interface MirrorMapper {
 	
 	// 안드로이드 
 	public List<HairStyle> allStyle(String id);
+	
+	//YG2 HairIndexManager
+	@Update("update hair_style_img set style_name=#{style_name} where sequence=#{sequence}")
+	public void hairIndexManager(String style_name,int sequence);
+	
+	@Update("update hair_style_img set img_show=#{img_show} where sequence=#{sequence}")
+	public void hairIndexManager2(String img_show,int sequence);
 }
