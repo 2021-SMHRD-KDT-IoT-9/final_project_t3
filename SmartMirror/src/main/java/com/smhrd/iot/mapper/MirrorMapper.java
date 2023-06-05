@@ -73,24 +73,9 @@ public interface MirrorMapper {
 	// 관리자 - 스타일 수정
 	@Update("update hair_style_img set style_name= #{name}, img_show= #{show} where hair_id = #{id}")
 	public int styleUpload (String id, String name, String show);
-<<<<<<< HEAD
-		
-=======
-	
->>>>>>> branch 'back' of https://github.com/2021-SMHRD-KDT-IoT-9/final_project_t3.git
+
 	// 안드로이드 
 	public List<HairStyle> allStyle(String id);
-<<<<<<< HEAD
-		
-	// 안드로이드 메모 수정
-	@Update("update my_history set memo = #{memo} where pic_path = #{path}")
-	public int memoUpdate(String path, String memo);
-		
-	// 안드로이드 메모 삭제
-	@Delete("delete from my_history where pic_path = #{path}")
-	public int memoDelete(String path);
-		
-=======
 	
 	// 안드로이드 메모 수정
 	@Update("update my_history set memo = #{memo} where pic_path = #{path}")
@@ -99,7 +84,6 @@ public interface MirrorMapper {
 	// 안드로이드 메모 삭제
 	@Delete("delete from my_history where pic_path = #{path}")
 	public int memoDelete(String path);
-	
->>>>>>> branch 'back' of https://github.com/2021-SMHRD-KDT-IoT-9/final_project_t3.git
+
 }
 	
