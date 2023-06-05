@@ -14,21 +14,25 @@ import lombok.Setter;
 @AllArgsConstructor
 @RequiredArgsConstructor
 public class HairStyle {
-	@Nonnull 
+	@Nonnull
 	private String hair_id;
-	
+
 	private int sequence;
-	private String img_show;  
 	
+	private String img_show;
+
 	@Nonnull
 	private String style_name;
 	private String salon_id;
-	@Nonnull
-	private String cut_dy; 
 	
+	@Nonnull
+	private String cut_dy;
+
 	public HairStyle(@Nonnull String hair_id, @Nonnull String style_name) {
 		this.hair_id = hair_id;
 		this.style_name = style_name;
 	}
 	
+
+
 }
