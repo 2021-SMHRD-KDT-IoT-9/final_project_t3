@@ -19,6 +19,10 @@ public class RaspController {
 
 	@Autowired
 	private MirrorService service;
+	
+	@Autowired
+	private RestMirrorController restMirrorController;
+	
 	private int cnt = 0;
 	
 	
@@ -62,7 +66,7 @@ public class RaspController {
     // 라파-Spring after 사진 저장
     @PostMapping("/after")
     public void afterPic(@RequestParam("img") MultipartFile files, @RequestParam("text") String text) throws IOException{
-    	cnt++;
+    	int seq = restMirrorController.getMHSeq();
     	
     	byte [] imgData = files.getBytes();
     	String fileName = files.getOriginalFilename();
@@ -75,7 +79,7 @@ public class RaspController {
 		mh.setSalon_id("a000");
     	mh.setMemo("AfterMemo");
     	
-		String picName = "after_"+mh.getSalon_id()+"_"+mh.getMember_id()+"_"+cnt+".jpg";
+		String picName = "after_"+mh.getSalon_id()+"_"+mh.getMember_id()+"_"+seq+".jpg";
 				
     	String src = "C:/Users/user/git/final_project_t3/SmartMirror/src/main/resources/static/afterImg/"+picName;
     	

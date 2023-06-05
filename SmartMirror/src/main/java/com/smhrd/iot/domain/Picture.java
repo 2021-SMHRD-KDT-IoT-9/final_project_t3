@@ -8,8 +8,8 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 public class Picture {
+	
 	private String username;
 	private String fullPath;
-	
 	
 }

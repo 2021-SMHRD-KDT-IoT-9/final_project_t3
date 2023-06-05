@@ -71,8 +71,7 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-jdbc</artifactId>
         </dependency>
-        
-        
+                
 		<dependency>
 		    <groupId>com.google.api-client</groupId>
 		    <artifactId>google-api-client</artifactId>
@@ -90,7 +89,28 @@
 		    <artifactId>google-api-services-youtube</artifactId>
 		    <version>v3-rev206-1.25.0</version>
 		</dependency>
+		
+		<!-- Apache HttpClient -->
+		
+		<dependency>
+		    <groupId>org.apache.httpcomponents</groupId>
+		    <artifactId>httpcore</artifactId>
+		    <version>4.4.15</version>
+		</dependency>
+		<dependency>
+		    <groupId>org.apache.httpcomponents</groupId>
+		    <artifactId>httpclient</artifactId>
+		    <version>4.5.13</version>
+		</dependency>
 
+		<!-- https://mvnrepository.com/artifact/org.codehaus.jackson/jackson-core-asl -->
+		<dependency>
+		    <groupId>org.codehaus.jackson</groupId>
+		    <artifactId>jackson-core-asl</artifactId>
+		    <version>1.9.13</version>
+		</dependency>
+
+		
 		
 	</dependencies>
 

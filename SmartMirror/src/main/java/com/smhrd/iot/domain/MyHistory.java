@@ -1,8 +1,12 @@
 package com.smhrd.iot.domain;
 
+import javax.annotation.Nonnull;
+
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.NonNull;
+import lombok.RequiredArgsConstructor;
 import lombok.Setter;
 
 @Getter
@@ -10,13 +14,13 @@ import lombok.Setter;
 @NoArgsConstructor
 @AllArgsConstructor
 public class MyHistory {
-
-		private String member_id;
-		private String cut_dy;
-		private int sequence;
-		private String salon_id;
-		private String pic_path;
-		private String memo;
-		private String salon_name; // 안드로이드 떄문에 추가 
+	
+	private String member_id;
+	private String cut_dy;
+	private int sequence;
+	private String salon_id;
+	private String pic_path;
+	private String memo;
+	private String salon_name; // 안드로이드 떄문에 추가 
 
 }

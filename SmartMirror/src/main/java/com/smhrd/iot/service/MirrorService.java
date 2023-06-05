@@ -30,8 +30,7 @@ public class MirrorService {
 	public void insertvideo(Video v) {
 		mapper.insertvideo(v);
 	}
-	
-	
+		
 	public List<MyHistory> myHistory (String id){
 		return mapper.myHistory(id);
 	}
@@ -51,9 +50,35 @@ public class MirrorService {
 	public List<Video> videolist() {
 		return mapper.videolist();
 	}
-	
+
+	// 웹 - 이미지 파일명 리스트
 	public List<Image> imglist(){
 		return mapper.imglist();
+	}
+	
+	// 웹 - 헤어 스타일 이미지 테이블 파일명 리스트
+	public List<HairStyle> hairstylelist(){
+		return mapper.hairstylelist();
+	}
+	
+	// my_history 테이블 시퀀스 마지막 값 불러오기
+	public int getMHSeq() {
+		return mapper.getMHSeq();
+	}
+
+	// hair_style_img 테이블 시퀀스 마지막 값 불러오기
+	public int getHSSeq() {
+		return mapper.getHSSeq();
+	}
+
+	// image 테이블 시퀀스 마지막 값 불러오기
+	public int getImgSeq() {
+		return mapper.getImgSeq();
+	}
+	
+	// image 테이블 시퀀스 마지막 값 불러오기
+	public int getVideoSeq() {
+		return mapper.getVideoSeq();
 	}
 	
 	// 관리자 - 스타일
@@ -84,6 +109,24 @@ public class MirrorService {
 	// 안드로이드
 	public List<HairStyle> allStyle(String id){
 		return mapper.allStyle(id);
+	}
+	
+	// 관리자 - 스타일 수정 
+	public void styleUpload(String id, String name, String show) {
+		int cnt = mapper.styleUpload(id, name, show);
+		System.out.println("수정 성공 : "+cnt);	
+	}
+	
+	// 안드 - 메모 수정 
+	public void memoUpdate(String path, String memo) {
+		int cnt = mapper.memoUpdate(path, memo);
+		System.out.println("메모 수정 : "+cnt);
+	}
+	
+	// 안드 - 메모 삭제 
+	public void memoDelete(String path) {
+		int cnt = mapper.memoDelete(path);
+		System.out.println("메모 삭제 : "+cnt);
 	}
 	
 }

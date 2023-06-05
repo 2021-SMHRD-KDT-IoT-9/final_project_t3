@@ -33,7 +33,7 @@ public class HomeController {
 	
 	
 	// ------------------------test-------------------------
-	@GetMapping("/test")
+	@GetMapping("/uptest")
 	public String testmain() {
 		return "ztest-main";
 	}

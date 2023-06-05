@@ -29,6 +29,7 @@ function imgView(data) {
    result += "</div>";
    $("#imgList").html(result);
 }
+
 function imgDelete(id){
    console.log(name)
    $.ajax({
