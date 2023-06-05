@@ -63,9 +63,9 @@ public class ManagerWebController {
 		cnt--;
 		System.out.println("삭제 " + cnt);
 		session.setAttribute("videocnt", cnt);
-		
+
 		File file = new File(
-				"C:/Users/user/git/final_project_t3/SmartMirror/src/main/resources/static/uploadvideo/"+id+ ".MP4");
+				"C:/Users/user/git/final_project_t3/SmartMirror/src/main/resources/static/uploadvideo/" + id + ".MP4");
 		if (file.exists()) { // 파일 존재 확인
 			if (file.delete()) {
 				System.out.println("파일삭제 성공");
@@ -75,10 +75,10 @@ public class ManagerWebController {
 		} else {
 			System.out.println("파일이 존재하지 않습니다.");
 		}
-		
+
 	}
 
-	// 동영상 저장 YG
+	// 동영상 저장
 	@PostMapping("/videoupload")
 	public void videoUpload(@RequestParam("name") String name, @RequestPart("file") MultipartFile file)
 			throws IOException {
@@ -106,7 +106,7 @@ public class ManagerWebController {
 		}
 	}
 
-	// 이미지 삭제 1 YG
+	// 이미지 삭제
 	@GetMapping("/imgdelete")
 	public void imgDelete(@RequestParam("id") String id) {
 		service.imgDelete(id);
@@ -154,32 +154,15 @@ public class ManagerWebController {
 		}
 	}
 
-	// Style 스타일명 이름 바꾸기! YG2
-	  @PostMapping("/styleupload")
-	  public void styleupload(@RequestParam("index") int index,
-	                          @RequestParam("newStyleName") String newStyleName,
-	                          @RequestParam("newExposure") String newExposure) {
-	    System.out.println("index: " + index);
-	    int sequence=index;
-	    System.out.println("newStyleName: " + newStyleName);
-	    String style_name=newStyleName;
-	    System.out.println("newExposure: " + newExposure);
-	    String img_show=newExposure;
-	    HairStyle h=new HairStyle();
-	    if(newStyleName!=null) {
-	    	h.setStyle_name(style_name);
-	    	h.setSequence(sequence);
-	    	System.out.println(style_name);
-	    	System.out.println(sequence);
-	    	service.hairIndexManager(style_name,sequence);
-	    }
-	    if(newExposure!=null) {
-	    	h.setImg_show(img_show);
-	    	h.setSequence(sequence);
-	    	System.out.println(img_show);
-	    	System.out.println(sequence);
-	    	service.hairIndexManager2(img_show, sequence);
-	    }
-	  }
+	// 관리자 - 스타일 수정
+	@PostMapping("/styleupload")
+	public void styleUpload(@RequestParam("id") String id, @RequestParam("newStyleName") String newName,
+			@RequestParam("newExposure") String newExposure) {
+		System.out.println("id: " + id);
+		System.out.println("newStyleName: " + newName);
+		System.out.println("newExposure: " + newExposure);
+		
+		service.styleUpload(id, newName, newExposure);
+	}
 
 }

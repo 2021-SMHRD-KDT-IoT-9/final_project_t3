@@ -60,13 +60,14 @@ public interface MirrorMapper {
 	@Delete("delete from video where video_id=#{id}")
 	public int videoDelete(String id);
 	
+	// 관리자 - 스타일 수정
+	@Update("update hair_style_img set style_name= #{name}, img_show= #{show} where hair_id = #{id}")
+	public int styleUpload (String id, String name, String show);
+	
 	// 안드로이드 
 	public List<HairStyle> allStyle(String id);
 	
-	//YG2 HairIndexManager
-	@Update("update hair_style_img set style_name=#{style_name} where sequence=#{sequence}")
-	public void hairIndexManager(String style_name,int sequence);
 	
-	@Update("update hair_style_img set img_show=#{img_show} where sequence=#{sequence}")
-	public void hairIndexManager2(String img_show,int sequence);
+	
 }
+	

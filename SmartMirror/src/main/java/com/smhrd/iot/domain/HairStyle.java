@@ -18,11 +18,13 @@ public class HairStyle {
 	private String hair_id;
 
 	private int sequence;
+	
 	private String img_show;
 
 	@Nonnull
 	private String style_name;
 	private String salon_id;
+	
 	@Nonnull
 	private String cut_dy;
 
@@ -30,6 +32,7 @@ public class HairStyle {
 		this.hair_id = hair_id;
 		this.style_name = style_name;
 	}
+	
 
 
 }

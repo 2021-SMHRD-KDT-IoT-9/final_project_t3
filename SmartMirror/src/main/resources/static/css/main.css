@@ -116,6 +116,33 @@ ul li {
     padding: 50px;
 }   
 
+.hai {
+	font-family: 'GmarketSansMedium';
+    width: 80%; /* 화면의 60%로 너비 설정 */
+    height: 700px; /* 높이 700px로 설정 */
+    margin: 0 auto; /* 가로 중앙 정렬을 위해 margin을 자동으로 설정합니다. */
+    margin-top: 50px;
+    padding: 50px;
+}  
+
+.hai h1{
+	margin-bottom:60px;
+}
+
+.sty {
+	font-family: 'GmarketSansMedium';
+    width: 80%; /* 화면의 60%로 너비 설정 */
+    height: 700px; /* 높이 700px로 설정 */
+    margin: 0 auto; /* 가로 중앙 정렬을 위해 margin을 자동으로 설정합니다. */
+    margin-top: 50px;
+    padding: 50px;
+}  
+
+.sty h1{
+	margin-bottom:60px;
+}
+
+
 .btn-gradient {
     color: rgb(0, 0, 0);
     height: 50px;
@@ -158,6 +185,12 @@ ul li {
     flex-wrap: wrap;
 }
 
+#styleList{
+	display: flex;
+    flex-wrap: wrap;
+	width: 100%;
+}
+
 .logostyle{
     margin: 5px;
     display: flex;
@@ -191,6 +224,26 @@ ul li {
     width: 400px;
     height: 600px;
 }
+
+.logostyle3{
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 400px;
+    height: 370px;
+}
+
+.logostyle3 p {
+    font-family: 'TheJamsil5Bold';
+    font-size: 25px;
+    padding: 0px;
+    margin-top: 10px;
+    margin-bottom: 0px;
+}
+
+
 
 .logostyle2 p {
     font-family: 'TheJamsil5Bold';

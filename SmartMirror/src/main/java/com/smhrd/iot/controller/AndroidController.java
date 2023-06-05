@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -47,6 +48,12 @@ public class AndroidController {
     	System.out.println("allStyle : "+list.get(0).getStyle_name());
     	return ResponseEntity.ok(list);
     	
+    }
+    
+    // 메모 저장
+    @PostMapping("/and/memoUpdate")
+    public void memoUpdate() {
+    	System.out.println("메모 진입");
     }
     
     
