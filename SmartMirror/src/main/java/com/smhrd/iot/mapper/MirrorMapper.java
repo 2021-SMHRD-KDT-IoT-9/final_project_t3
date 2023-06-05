@@ -67,7 +67,13 @@ public interface MirrorMapper {
 	// 안드로이드 
 	public List<HairStyle> allStyle(String id);
 	
+	// 안드로이드 메모 수정
+	@Update("update my_history set memo = #{memo} where pic_path = #{path}")
+	public int memoUpdate(String path, String memo);
 	
+	// 안드로이드 메모 삭제
+	@Delete("delete from my_history where pic_path = #{path}")
+	public int memoDelete(String path);
 	
 }
 	

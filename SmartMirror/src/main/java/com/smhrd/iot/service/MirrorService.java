@@ -89,11 +89,19 @@ public class MirrorService {
 	// 관리자 - 스타일 수정 
 	public void styleUpload(String id, String name, String show) {
 		int cnt = mapper.styleUpload(id, name, show);
-		System.out.println(id);
-		System.out.println(name);
-		System.out.println(show);
-		System.out.println("수정 성공 : "+cnt);
-		
+		System.out.println("수정 성공 : "+cnt);	
+	}
+	
+	// 안드 - 메모 수정 
+	public void memoUpdate(String path, String memo) {
+		int cnt = mapper.memoUpdate(path, memo);
+		System.out.println("메모 수정 : "+cnt);
+	}
+	
+	// 안드 - 메모 삭제 
+	public void memoDelete(String path) {
+		int cnt = mapper.memoDelete(path);
+		System.out.println("메모 삭제 : "+cnt);
 	}
 	
 }
