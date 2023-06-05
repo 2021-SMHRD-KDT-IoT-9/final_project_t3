@@ -27,6 +27,9 @@ public class ManagerWebController {
 
 	@Autowired
 	private HttpSession session;
+	
+	@Autowired
+	private RestMirrorController restMirrorController;
 
 	// 관리자 페이지 - 스타일 관리
 	@PostMapping("/hairmanager")
@@ -57,10 +60,10 @@ public class ManagerWebController {
 		public void videoDelete(@RequestParam("id") String id) {
 			service.videoDelete(id);
 
-			Integer cnt = (Integer) session.getAttribute("videocnt");
-			cnt--;
-			System.out.println("삭제 " + cnt);
-			session.setAttribute("videocnt", cnt);
+//			Integer cnt = (Integer) session.getAttribute("videocnt");
+//			cnt--;
+//			System.out.println("삭제 " + cnt);
+//			session.setAttribute("videocnt", cnt);
 
 			File file = new File(
 					"C:/Users/user/git/final_project_t3/SmartMirror/src/main/resources/static/uploadvideo/" + id + ".MP4");
@@ -81,13 +84,14 @@ public class ManagerWebController {
 		public void videoUpload(@RequestParam("name") String name, @RequestPart("file") MultipartFile file)
 				throws IOException {
 			{
-				Integer cnt = (Integer) session.getAttribute("videocnt");
-				if (cnt == null) {
-					cnt = 0;
-				}
-
+//				Integer cnt = (Integer) session.getAttribute("imgcnt");
+//				if (cnt == null) {
+//					cnt = 0;
+//				}
+				int cnt = restMirrorController.getVideoSeq()+1;
+				
 				if (!file.isEmpty()) {
-					cnt++;
+					
 					System.out.println("추가" + cnt);
 					session.setAttribute("videocnt", cnt);
 					Video v = new Video();
@@ -109,10 +113,10 @@ public class ManagerWebController {
 		public void imgDelete(@RequestParam("id") String id) {
 			service.imgDelete(id);
 
-			Integer cnt = (Integer) session.getAttribute("imgcnt");
-			cnt--;
-			System.out.println("삭제" + cnt);
-			session.setAttribute("imgcnt", cnt);
+//			Integer cnt = (Integer) session.getAttribute("imgcnt");
+//			cnt--;
+//			System.out.println("삭제" + cnt);
+//			session.setAttribute("imgcnt", cnt);
 			File file = new File(
 					"C:/Users/user/git/final_project_t3/SmartMirror/src/main/resources/static/uploadimg/" + id + ".jpg");
 			if (file.exists()) { // 파일 존재 확인
@@ -126,14 +130,17 @@ public class ManagerWebController {
 			}
 		}
 
-		// 이미지 저장 2
+		// 이미지 저장
 		@PostMapping("/imgupload")
 		public void imgUpload(@RequestParam("name") String name, @RequestPart("file") MultipartFile file)
 				throws IOException {
-			Integer cnt = (Integer) session.getAttribute("imgcnt");
-			if (cnt == null) {
-				cnt = 0;
-			}
+//			Integer cnt = (Integer) session.getAttribute("imgcnt");
+//			if (cnt == null) {
+//				cnt = 0;
+//			}
+			
+			int cnt = restMirrorController.getImgSeq()+1;
+			
 			if (!file.isEmpty()) {
 				cnt++;
 				System.out.println("추가" + cnt);
