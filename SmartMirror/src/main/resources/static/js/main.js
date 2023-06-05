@@ -1,14 +1,14 @@
 // 관리자 - 스타일 관리
 function hair_Manager() {
-	$.ajax({
-		url: "hairmanager",
-		type: "post",
-		dataType: "json",
-		success: styleView,
-		error: function() {
-			alert("통신실패!")
-		}
-	})
+   $.ajax({
+      url: "hairmanager",
+      type: "post",
+      dataType: "json",
+      success: styleView,
+      error: function() {
+         alert("통신실패!")
+      }
+   })
 }
 
 // 관리자 - 스타일 관리 view
@@ -76,26 +76,8 @@ function hair_saveyes() {
 			alert("통신실패!")
 		}
 	})
-<<<<<<< HEAD
-=======
-}
-// 등록 스타일 보기 view  
-function styleYesView(data) {
-	console.log("등록 스타일 성공", data)
-	var result = "<div class='logoset' id='hairyYesList'>";
-	$.each(data, (index, vo) => {
-		result += "<div class='logostyle3'>";
-		result += "<img src='/hairStyle/" + vo.hair_id + ".jpg' width='200px' height='200px' /><br>";
-		result += "<p>" + vo.style_name + "</p>";
-		result += "<p>" + vo.cut_dy + "</p>";
-		result += "</div>";
-	});
-	result += "</div>";
-	$("#hairyYesList").html(result);
->>>>>>> branch 'back' of https://github.com/2021-SMHRD-KDT-IoT-9/final_project_t3.git
 }
 
-<<<<<<< HEAD
 // 등록 스타일 보기 view  
 function styleYesView(data) {
 	console.log("등록 스타일 성공", data)
@@ -110,7 +92,3 @@ function styleYesView(data) {
 	result += "</div>";
 	$("#hairyYesList").html(result);
 }
-=======
-
-
->>>>>>> branch 'back' of https://github.com/2021-SMHRD-KDT-IoT-9/final_project_t3.git
