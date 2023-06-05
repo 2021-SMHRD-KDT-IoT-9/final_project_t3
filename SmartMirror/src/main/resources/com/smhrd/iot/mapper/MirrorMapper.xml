@@ -73,17 +73,9 @@
          where img_show = 'Y'
    </select>
 
-<<<<<<< HEAD
    <!-- 안드로이드  -->
    <select id="allStyle" resultType="com.smhrd.iot.domain.HairStyle">
 	  select hair_id,style_name from hair_style_img where salon_id = 'a001'
    </select>
-=======
-
-		<!-- 안드로이드  -->
-	<select id="allStyle" resultType="com.smhrd.iot.domain.HairStyle">
-		select hair_id,style_name,img_show from hair_style_img where salon_id = #{id}
-	</select>
->>>>>>> branch 'back' of https://github.com/2021-SMHRD-KDT-IoT-9/final_project_t3.git
 
 </mapper>
