@@ -18,6 +18,8 @@ import org.springframework.core.io.FileSystemResource;
 import org.springframework.core.io.ResourceLoader;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpMethod;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.ui.Model;
@@ -32,9 +34,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.client.HttpServerErrorException;
+import org.springframework.web.client.RestClientException;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.util.UriComponentsBuilder;
 
 import com.smhrd.iot.domain.HairStyle;
 import com.smhrd.iot.domain.Image;
@@ -77,7 +82,7 @@ public class RestMirrorController {
 			
 			String path = "img"+seq;
 			
-			i.setSalon_id("a001");
+			i.setSalon_id("a000");
 			i.setImg_id(i.getSalon_id()+"_"+path);
 			
 			String fullPath = "C:/Users/user/git/final_project_t3/SmartMirror/src/main/resources/static/uploadimg/"+i.getImg_id()+".jpg";
@@ -104,7 +109,7 @@ public class RestMirrorController {
 			
 			String path = "video"+seq;
 			
-			v.setSalon_id("a001");
+			v.setSalon_id("a000");
 			v.setVideo_id(v.getSalon_id()+"_"+path);
 			
 			String fullPath = "C:/Users/user/git/final_project_t3/SmartMirror/src/main/resources/static/uploadvideo/"+v.getVideo_id()+".mp4";
@@ -149,84 +154,26 @@ public class RestMirrorController {
     @CrossOrigin
     @GetMapping("/stylelist")
     public ResponseEntity<List<HairStyle>> hairstylelist() {
-        
          List<HairStyle> styles = service.hairstylelist();
-                  
          return ResponseEntity.ok(styles);
      }
     
-    // RestTemplate 이용한 flask 통신 시도
-    @CrossOrigin
-    @PostMapping("/testpage")
-    public String testpage() {
-    	
-    	RestTemplate restTemplate = new RestTemplate();
-    	
-    	HttpHeaders headers = new HttpHeaders();
-    	headers.setContentType(MediaType.APPLICATION_JSON);
-    	
-    	String json = "{ \"command\": \"run_script\", \"script_path\": \"/python/Untitled.py\", \"args\": [\"arg1\", \"arg2\"],\"options\": { \"member_id\": \"aa\", \"salon_id\": \"a000\" }}";
-    	HttpEntity<String> entity = new HttpEntity<String>(json, headers);
-    	
-    	String url = "http://59.0.234.211:5000/testpage";
-    	String response = restTemplate.postForObject(url, entity, String.class);
-    	
-    	return response;
-    }
-    
-    // flask url 연동
-	@RequestMapping(value = "/pytest", method = RequestMethod.GET)
-	public ModelAndView pytest() {
-		ModelAndView mav = new ModelAndView();
-		
-		String salon_id = "a000";
-		
-		String url = "http://59.0.234.211:5000/testpage?salon_id="+salon_id;
-		String sb = "";
-		try {
-			HttpURLConnection conn = (HttpURLConnection) new URL(url).openConnection();
-			
-
-			BufferedReader br = new BufferedReader(new InputStreamReader(conn.getInputStream(), "utf-8"));
-
-			String line = null;
-
-			while ((line = br.readLine()) != null) {
-				sb = sb + line + "\n";
-			}
-			System.out.println("========br======" + sb.toString());
-			if (sb.toString().contains("ok")) {
-				System.out.println("test");
-				
-			}
-			br.close();
-
-			System.out.println("" + sb.toString());
-		} catch (MalformedURLException e) {
-			e.printStackTrace();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		mav.addObject("test1", sb.toString()); // "test1"는 jsp파일에서 받을때 이름, 
-        						//sb.toString은 value값(여기에선 test)
-		mav.addObject("fail", false);
-		mav.setViewName("ztest-success");   // jsp파일 이름
-		return mav;
-	}
-    
+    // my_history 테이블 마지막 시퀀스 가져오기
 	public int getMHSeq() {
 		return service.getMHSeq();
 	}
 	
+	// hair_style_img 테이블 마지막 시퀀스 가져오기
 	public int getHSSeq() {
 		return service.getHSSeq();
 	}
 	
+	// image 테이블 마지막 시퀀스 가져오기
 	public int getImgSeq() {
 		return service.getImgSeq();
 	}
 	
+	// video 테이블 마지막 시퀀스 가져오기
 	public int getVideoSeq() {
 		return service.getVideoSeq();
 	}
@@ -236,8 +183,36 @@ public class RestMirrorController {
 		int seq =  getMHSeq()+1;
 		System.out.println(seq);
 	}
-    
-	
+       
+	// Flask 서버와 통신하여 헤어+모델 얼굴 이미지 합성
+	public ResponseEntity<String> callFlaskServer() {
+	    String flaskUrl = "http://localhost:5001/pytest";
+	    UriComponentsBuilder builder = UriComponentsBuilder.fromUriString(flaskUrl)
+	            .queryParam("salon_id", "a000");
+
+	    RestTemplate restTemplate = new RestTemplate();
+	    String errorMessage = "";
+	    
+	    try {
+	        ResponseEntity<String> response = restTemplate.getForEntity(builder.toUriString(), String.class);
+	        String responseBody = response.getBody();
+	        // TODO: 응답 결과를 원하는 방식으로 처리
+	        System.out.println(response);
+	        return response;
+	    } catch (HttpServerErrorException.InternalServerError e) {
+	        // Flask 서버에서 500 오류 응답이 왔을 경우 처리
+	        errorMessage = "Flask 서버에서 내부 오류가 발생했습니다.";
+	        System.err.println(errorMessage);
+	        e.printStackTrace();
+	        return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(errorMessage);
+	    } catch (RestClientException e) {
+	        // Flask 서버와의 통신 중에 발생한 다른 예외 처리
+	        errorMessage = "Flask 서버와의 통신 중에 오류가 발생했습니다.";
+	        System.err.println(errorMessage);
+	        e.printStackTrace();
+	        return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(errorMessage);
+	    }
+	}
 	
 	
 }

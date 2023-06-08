@@ -31,7 +31,7 @@
 	
 	<!-- 웝 - 헤어 스타일 이미지 테이블 파일명 리스트 불러오기 -->
 	<select id="hairstylelist" resultType="com.smhrd.iot.domain.HairStyle">
-		select hair_id from hair_style_img
+		select hair_id from hair_style_img where img_show = 'Y'
 	</select>
 
 	<select id="getMHSeq" resultType="int">
@@ -75,7 +75,7 @@
 
    <!-- 안드로이드  -->
    <select id="allStyle" resultType="com.smhrd.iot.domain.HairStyle">
-	  select hair_id,style_name from hair_style_img where salon_id = 'a001'
+	  select hair_id,style_name,img_show from hair_style_img where salon_id = #{id} and img_show = 'Y'
    </select>
 
 </mapper>

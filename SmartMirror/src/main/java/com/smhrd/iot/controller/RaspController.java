@@ -5,9 +5,11 @@ import java.io.IOException;
 import java.util.Arrays;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.client.RestTemplate;
 import org.springframework.web.multipart.MultipartFile;
 
 import com.smhrd.iot.domain.MyHistory;
@@ -62,10 +64,9 @@ public class RaspController {
 		}
     }
     
-    
     // 라파-Spring after 사진 저장
     @PostMapping("/after")
-    public void afterPic(@RequestParam("img") MultipartFile files, @RequestParam("text") String text) throws IOException{
+    public ResponseEntity<String> afterPic(@RequestParam("img") MultipartFile files, @RequestParam("text") String text) throws IOException{
     	int seq = restMirrorController.getMHSeq();
     	
     	byte [] imgData = files.getBytes();
@@ -85,6 +86,8 @@ public class RaspController {
     	
 		mh.setPic_path(picName);
     	
+		ResponseEntity<String> result = restMirrorController.callFlaskServer();
+		
     	try (FileOutputStream fos = new FileOutputStream(src)){
         		fos.write(imgData);
         		fos.flush();
@@ -94,8 +97,14 @@ public class RaspController {
         		System.out.println("이미지 파일 저장");
         		System.out.println("파일 저장 경로 :"+src);
         		
+        		restMirrorController.callFlaskServer();
+        		
+        		System.out.println("python 연결 성공");        		
+        		return result;
+        		
     	} catch (Exception e) {
     		System.out.println("이미지 저장 오류"+e.getMessage());
+    			return result;
 		}
     }
 	

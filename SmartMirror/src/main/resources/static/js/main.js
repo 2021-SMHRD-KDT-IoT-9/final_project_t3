@@ -18,7 +18,7 @@ function styleView(data) {
 	result += "<div id='styleList'>";
 	$.each(data, (index, vo) => {
 		result += "<div class='logostyle2'>";
-		result += "<img src='/hairStyle/" + vo.hair_id + ".jpg' width='200px' height='200px' />";
+		result += "<img src='/maskhairstyle/" + vo.hair_id + ".jpg' width='160px' height='210px' />";
 		result += "<br>";
 		result += "<p>스타일명 : " + vo.style_name + "</p>";
 		result += "<p>날짜 : " + vo.cut_dy + "</p>";
@@ -84,7 +84,7 @@ function styleYesView(data) {
 	var result = "<div class='logoset' id='hairyYesList'>";
 	$.each(data, (index, vo) => {
 		result += "<div class='logostyle3'>";
-		result += "<img src='/hairStyle/" + vo.hair_id + ".jpg' width='200px' height='200px' /><br>";
+		result += "<img src='/maskhairstyle/" + vo.hair_id + ".jpg' width='160px' height='210px' /><br>";
 		result += "<p>" + vo.style_name + "</p>";
 		result += "<p>" + vo.cut_dy + "</p>";
 		result += "</div>";
