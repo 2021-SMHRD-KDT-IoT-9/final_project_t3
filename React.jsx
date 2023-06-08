@@ -1,4 +1,4 @@
-//before
+//before Code from Web React
 const handleSubmit = async (e) => {
     console.log('보낸 텍스트 :', text)
 
