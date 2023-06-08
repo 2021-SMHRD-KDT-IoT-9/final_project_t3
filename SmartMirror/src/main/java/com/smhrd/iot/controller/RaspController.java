@@ -25,26 +25,23 @@ public class RaspController {
 	@Autowired
 	private RestMirrorController restMirrorController;
 	
-	private int cnt = 0;
-	
-	
-    // JDK 라파-Spring Before 사진 저장
+    // 라즈베리파이에서 이미지 파일 받기 / Before 사진 서버 저장
     @PostMapping("/before")
     public void beforePic(@RequestParam("img") MultipartFile files) throws IOException{
-    	cnt++;
+    	int seq = restMirrorController.getMHSeq();
     	
     	byte [] imgData = files.getBytes();
     	String fileName = files.getOriginalFilename();
-    	//System.out.println("파일 확인 : "+Arrays.toString(imgData));
+    	System.out.println("파일 확인 : "+Arrays.toString(imgData));
     	System.out.println("원본이름 : "+fileName);
     	
 		MyHistory mh = new MyHistory();
     	
-		mh.setMember_id("bb");
+		mh.setMember_id("30495592wo51");
 		mh.setSalon_id("a000");
     	mh.setMemo("Before Memo!");
     	
-		String picName = "before_"+ mh.getSalon_id()+"_"+mh.getMember_id()+"_"+cnt+".jpg";
+		String picName = "before_"+ mh.getSalon_id()+"_"+mh.getMember_id()+"_"+seq+".jpg";
 		
     	String src = "C:/Users/user/git/final_project_t3/SmartMirror/src/main/resources/static/beforeImg/"+picName;
 
@@ -53,10 +50,7 @@ public class RaspController {
     	try (FileOutputStream fos = new FileOutputStream(src)){
         		fos.write(imgData);
         		fos.flush();
-        		
-//        		service.insertpic(mh);
-
-        		System.out.println("이미지 파일 저장 성공");
+        		System.out.println("Before 이미지 파일 저장 성공");
         		System.out.println("파일 저장 경로 :"+src);
         		
     	} catch (Exception e) {
@@ -64,14 +58,14 @@ public class RaspController {
 		}
     }
     
-    // 라파-Spring after 사진 저장
+    // 라파베리파이에서 사진, member_id 받기 / after 사진 저장 / 세그먼트한 헤어와 모델 합성 후 서버에 합성 사진 저장
     @PostMapping("/after")
     public ResponseEntity<String> afterPic(@RequestParam("img") MultipartFile files, @RequestParam("text") String text) throws IOException{
     	int seq = restMirrorController.getMHSeq();
     	
     	byte [] imgData = files.getBytes();
     	String fileName = files.getOriginalFilename();
-    	//System.out.println("파일 확인 : "+Arrays.toString(imgData));
+    	System.out.println("파일 확인 : "+Arrays.toString(imgData));
     	System.out.println("원본이름 : "+fileName);
     	System.out.println("userId : "+text);
 		MyHistory mh = new MyHistory();

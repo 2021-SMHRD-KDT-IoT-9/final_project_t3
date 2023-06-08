@@ -19,14 +19,7 @@ import com.smhrd.iot.domain.Video;
 @Mapper
 public interface MirrorMapper {
 
-	@Insert("insert into test (id, pw) values (#{id},#{pw})")
-	public void insert(Mirror m);
-	
-	@Insert("insert into my_history (member_id, salon_id, pic_path) values (#{member_id},#{salon_id},#{pic_path})")
 	public void insertpic(MyHistory mh);
-	
-	@Insert("insert into video (video_id, salon_id, video_name) values (#{video_id},#{salon_id},#{video_name}) ")
-	public void insertvideo(Video v);
 
 	public List<MyHistory> myHistory(String id);
 	

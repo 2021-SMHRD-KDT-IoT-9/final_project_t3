@@ -18,19 +18,11 @@ public class MirrorService {
 
 	@Autowired
 	private MirrorMapper mapper;
-	
-	public void insert(Mirror m) {
-		mapper.insert(m);
-	}
-	
+		
 	public void insertpic(MyHistory mh) {
 		mapper.insertpic(mh);
 	}
 	
-	public void insertvideo(Video v) {
-		mapper.insertvideo(v);
-	}
-		
 	public List<MyHistory> myHistory (String id){
 		return mapper.myHistory(id);
 	}
@@ -47,6 +39,7 @@ public class MirrorService {
 		mapper.saveVideo(v);
 	}
 	
+	// 웹 - 동영상 파일명 리스트
 	public List<Video> videolist() {
 		return mapper.videolist();
 	}

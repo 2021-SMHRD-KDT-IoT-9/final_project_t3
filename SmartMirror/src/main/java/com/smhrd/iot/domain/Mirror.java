@@ -8,7 +8,9 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 public class Mirror {
+	
 	private String id;
 	private String pw;
+	
 }
 	

@@ -14,6 +14,7 @@ import lombok.Setter;
 @AllArgsConstructor
 @RequiredArgsConstructor
 public class Video {
+	
 	@Nonnull
     private String video_id;
     private String salon_id;

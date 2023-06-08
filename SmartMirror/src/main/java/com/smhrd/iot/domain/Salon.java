@@ -14,4 +14,5 @@ public class Salon {
 	private String salon_id;
 	private String salon_name;
 	private String address;
+	
 }

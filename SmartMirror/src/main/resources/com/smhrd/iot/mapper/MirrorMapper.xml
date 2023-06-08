@@ -2,6 +2,10 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.smhrd.iot.mapper.MirrorMapper"> 
 
+	<insert id="insertpic" parameterType="com.smhrd.iot.domain.MyHistory">
+		insert into my_history (member_id, salon_id, pic_path) values (#{member_id},#{salon_id},#{pic_path})
+	</insert>
+
 	<select id="myHistory" resultType="com.smhrd.iot.domain.MyHistory">
 		select * from my_history where member_id = #{id}
 	</select>

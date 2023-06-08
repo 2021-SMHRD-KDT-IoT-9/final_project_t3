@@ -14,6 +14,7 @@ import lombok.Setter;
 @AllArgsConstructor
 @RequiredArgsConstructor
 public class Image {
+	
 	@Nonnull
 	private String img_id;
 	private String salon_id;

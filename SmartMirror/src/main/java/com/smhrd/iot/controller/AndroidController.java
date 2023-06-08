@@ -47,8 +47,7 @@ public class AndroidController {
     	List<HairStyle> list = service.allStyle(id);
     	System.out.println("allStyle : "+list.get(0).getStyle_name());
     	System.out.println("id : "+list.get(0).getHair_id());
-    	return ResponseEntity.ok(list);
-    	
+    	return ResponseEntity.ok(list);    	
     }
     
     // 메모 저장
