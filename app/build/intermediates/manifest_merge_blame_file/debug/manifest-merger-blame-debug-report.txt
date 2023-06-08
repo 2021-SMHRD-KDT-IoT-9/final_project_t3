@@ -1,0 +1,211 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.example.abproject"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="24"
+8-->C:\Users\SMHRD\AndroidStudioProjects\ABProject\app\src\main\AndroidManifest.xml
+9        android:targetSdkVersion="33" />
+9-->C:\Users\SMHRD\AndroidStudioProjects\ABProject\app\src\main\AndroidManifest.xml
+10
+11    <uses-permission android:name="android.permission.INTERNET" />
+11-->C:\Users\SMHRD\AndroidStudioProjects\ABProject\app\src\main\AndroidManifest.xml:5:5-67
+11-->C:\Users\SMHRD\AndroidStudioProjects\ABProject\app\src\main\AndroidManifest.xml:5:22-64
+12    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+12-->C:\Users\SMHRD\AndroidStudioProjects\ABProject\app\src\main\AndroidManifest.xml:6:5-8:45
+12-->C:\Users\SMHRD\AndroidStudioProjects\ABProject\app\src\main\AndroidManifest.xml:7:9-63
+13
+14    <!-- Include required permissions for Google Maps API to run. -->
+15    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+15-->[com.google.android.gms:play-services-maps:18.1.0] C:\Users\SMHRD\.gradle\caches\transforms-3\b711e1d4f46198e6491015da680f8a5a\transformed\play-services-maps-18.1.0\AndroidManifest.xml:23:5-79
+15-->[com.google.android.gms:play-services-maps:18.1.0] C:\Users\SMHRD\.gradle\caches\transforms-3\b711e1d4f46198e6491015da680f8a5a\transformed\play-services-maps-18.1.0\AndroidManifest.xml:23:22-76
+16
+17    <uses-feature
+17-->[com.google.android.gms:play-services-maps:18.1.0] C:\Users\SMHRD\.gradle\caches\transforms-3\b711e1d4f46198e6491015da680f8a5a\transformed\play-services-maps-18.1.0\AndroidManifest.xml:26:5-28:35
+18        android:glEsVersion="0x00020000"
+18-->[com.google.android.gms:play-services-maps:18.1.0] C:\Users\SMHRD\.gradle\caches\transforms-3\b711e1d4f46198e6491015da680f8a5a\transformed\play-services-maps-18.1.0\AndroidManifest.xml:27:9-41
+19        android:required="true" />
+19-->[com.google.android.gms:play-services-maps:18.1.0] C:\Users\SMHRD\.gradle\caches\transforms-3\b711e1d4f46198e6491015da680f8a5a\transformed\play-services-maps-18.1.0\AndroidManifest.xml:28:9-32
+20
+21    <queries>
+21-->[com.google.android.gms:play-services-maps:18.1.0] C:\Users\SMHRD\.gradle\caches\transforms-3\b711e1d4f46198e6491015da680f8a5a\transformed\play-services-maps-18.1.0\AndroidManifest.xml:30:5-34:15
+22
+23        <!-- Needs to be explicitly declared on Android R+ -->
+24        <package android:name="com.google.android.apps.maps" />
+24-->[com.google.android.gms:play-services-maps:18.1.0] C:\Users\SMHRD\.gradle\caches\transforms-3\b711e1d4f46198e6491015da680f8a5a\transformed\play-services-maps-18.1.0\AndroidManifest.xml:33:9-64
+24-->[com.google.android.gms:play-services-maps:18.1.0] C:\Users\SMHRD\.gradle\caches\transforms-3\b711e1d4f46198e6491015da680f8a5a\transformed\play-services-maps-18.1.0\AndroidManifest.xml:33:18-61
+25    </queries>
+26
+27    <permission
+27-->[androidx.core:core:1.9.0] C:\Users\SMHRD\.gradle\caches\transforms-3\b270d1a26e91fe5547d283a56cc4ab3b\transformed\core-1.9.0\AndroidManifest.xml:22:5-24:47
+28        android:name="com.example.abproject.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+28-->[androidx.core:core:1.9.0] C:\Users\SMHRD\.gradle\caches\transforms-3\b270d1a26e91fe5547d283a56cc4ab3b\transformed\core-1.9.0\AndroidManifest.xml:23:9-81
+29        android:protectionLevel="signature" />
+29-->[androidx.core:core:1.9.0] C:\Users\SMHRD\.gradle\caches\transforms-3\b270d1a26e91fe5547d283a56cc4ab3b\transformed\core-1.9.0\AndroidManifest.xml:24:9-44
+30
+31    <uses-permission android:name="com.example.abproject.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+31-->[androidx.core:core:1.9.0] C:\Users\SMHRD\.gradle\caches\transforms-3\b270d1a26e91fe5547d283a56cc4ab3b\transformed\core-1.9.0\AndroidManifest.xml:26:5-97
+31-->[androidx.core:core:1.9.0] C:\Users\SMHRD\.gradle\caches\transforms-3\b270d1a26e91fe5547d283a56cc4ab3b\transformed\core-1.9.0\AndroidManifest.xml:26:22-94
+32
+33    <application
+33-->C:\Users\SMHRD\AndroidStudioProjects\ABProject\app\src\main\AndroidManifest.xml:10:5-62:19
+34        android:allowBackup="true"
+34-->C:\Users\SMHRD\AndroidStudioProjects\ABProject\app\src\main\AndroidManifest.xml:11:9-35
+35        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+35-->[androidx.core:core:1.9.0] C:\Users\SMHRD\.gradle\caches\transforms-3\b270d1a26e91fe5547d283a56cc4ab3b\transformed\core-1.9.0\AndroidManifest.xml:28:18-86
+36        android:dataExtractionRules="@xml/data_extraction_rules"
+36-->C:\Users\SMHRD\AndroidStudioProjects\ABProject\app\src\main\AndroidManifest.xml:12:9-65
+37        android:debuggable="true"
+38        android:extractNativeLibs="false"
+39        android:fullBackupContent="@xml/backup_rules"
+39-->C:\Users\SMHRD\AndroidStudioProjects\ABProject\app\src\main\AndroidManifest.xml:13:9-54
+40        android:icon="@mipmap/ic_launcher"
+40-->C:\Users\SMHRD\AndroidStudioProjects\ABProject\app\src\main\AndroidManifest.xml:14:9-43
+41        android:label="@string/app_name"
+41-->C:\Users\SMHRD\AndroidStudioProjects\ABProject\app\src\main\AndroidManifest.xml:15:9-41
+42        android:roundIcon="@mipmap/ic_launcher_round"
+42-->C:\Users\SMHRD\AndroidStudioProjects\ABProject\app\src\main\AndroidManifest.xml:16:9-54
+43        android:supportsRtl="true"
+43-->C:\Users\SMHRD\AndroidStudioProjects\ABProject\app\src\main\AndroidManifest.xml:17:9-35
+44        android:testOnly="true"
+45        android:theme="@style/Base.Theme.ABProject"
+45-->C:\Users\SMHRD\AndroidStudioProjects\ABProject\app\src\main\AndroidManifest.xml:18:9-52
+46        android:usesCleartextTraffic="true" >
+46-->C:\Users\SMHRD\AndroidStudioProjects\ABProject\app\src\main\AndroidManifest.xml:19:9-44
+47        <activity
+47-->C:\Users\SMHRD\AndroidStudioProjects\ABProject\app\src\main\AndroidManifest.xml:21:9-23:40
+48            android:name="com.example.abproject.findshop.FindShop4"
+48-->C:\Users\SMHRD\AndroidStudioProjects\ABProject\app\src\main\AndroidManifest.xml:22:13-47
+49            android:exported="false" />
+49-->C:\Users\SMHRD\AndroidStudioProjects\ABProject\app\src\main\AndroidManifest.xml:23:13-37
+50        <activity
+50-->C:\Users\SMHRD\AndroidStudioProjects\ABProject\app\src\main\AndroidManifest.xml:24:9-26:40
+51            android:name="com.example.abproject.findshop.FindShop3"
+51-->C:\Users\SMHRD\AndroidStudioProjects\ABProject\app\src\main\AndroidManifest.xml:25:13-47
+52            android:exported="false" />
+52-->C:\Users\SMHRD\AndroidStudioProjects\ABProject\app\src\main\AndroidManifest.xml:26:13-37
+53
+54        <meta-data
+54-->C:\Users\SMHRD\AndroidStudioProjects\ABProject\app\src\main\AndroidManifest.xml:28:9-30:64
+55            android:name="com.kakao.sdk.AppKey"
+55-->C:\Users\SMHRD\AndroidStudioProjects\ABProject\app\src\main\AndroidManifest.xml:29:13-48
+56            android:value="fef0fc78a8e27c3964be8937383cd5fe" />
+56-->C:\Users\SMHRD\AndroidStudioProjects\ABProject\app\src\main\AndroidManifest.xml:30:13-61
+57
+58        <activity
+58-->C:\Users\SMHRD\AndroidStudioProjects\ABProject\app\src\main\AndroidManifest.xml:32:9-34:40
+59            android:name="com.example.abproject.DetailShop.AllStyle"
+59-->C:\Users\SMHRD\AndroidStudioProjects\ABProject\app\src\main\AndroidManifest.xml:33:13-48
+60            android:exported="false" />
+60-->C:\Users\SMHRD\AndroidStudioProjects\ABProject\app\src\main\AndroidManifest.xml:34:13-37
+61        <activity
+61-->C:\Users\SMHRD\AndroidStudioProjects\ABProject\app\src\main\AndroidManifest.xml:35:9-37:40
+62            android:name="com.example.abproject.myhistory.LoginActivity"
+62-->C:\Users\SMHRD\AndroidStudioProjects\ABProject\app\src\main\AndroidManifest.xml:36:13-52
+63            android:exported="false" />
+63-->C:\Users\SMHRD\AndroidStudioProjects\ABProject\app\src\main\AndroidManifest.xml:37:13-37
+64        <activity
+64-->C:\Users\SMHRD\AndroidStudioProjects\ABProject\app\src\main\AndroidManifest.xml:38:9-40:40
+65            android:name="com.example.abproject.myhistory.MyHistoryDetail"
+65-->C:\Users\SMHRD\AndroidStudioProjects\ABProject\app\src\main\AndroidManifest.xml:39:13-54
+66            android:exported="false" />
+66-->C:\Users\SMHRD\AndroidStudioProjects\ABProject\app\src\main\AndroidManifest.xml:40:13-37
+67        <activity
+67-->C:\Users\SMHRD\AndroidStudioProjects\ABProject\app\src\main\AndroidManifest.xml:41:9-43:40
+68            android:name="com.example.abproject.myhistory.MyHistory"
+68-->C:\Users\SMHRD\AndroidStudioProjects\ABProject\app\src\main\AndroidManifest.xml:42:13-48
+69            android:exported="false" />
+69-->C:\Users\SMHRD\AndroidStudioProjects\ABProject\app\src\main\AndroidManifest.xml:43:13-37
+70        <activity
+70-->C:\Users\SMHRD\AndroidStudioProjects\ABProject\app\src\main\AndroidManifest.xml:44:9-46:40
+71            android:name="com.example.abproject.findshop.DetailShop"
+71-->C:\Users\SMHRD\AndroidStudioProjects\ABProject\app\src\main\AndroidManifest.xml:45:13-48
+72            android:exported="false" />
+72-->C:\Users\SMHRD\AndroidStudioProjects\ABProject\app\src\main\AndroidManifest.xml:46:13-37
+73        <activity
+73-->C:\Users\SMHRD\AndroidStudioProjects\ABProject\app\src\main\AndroidManifest.xml:47:9-49:39
+74            android:name="com.example.abproject.findshop.FindShop"
+74-->C:\Users\SMHRD\AndroidStudioProjects\ABProject\app\src\main\AndroidManifest.xml:48:13-46
+75            android:exported="true" />
+75-->C:\Users\SMHRD\AndroidStudioProjects\ABProject\app\src\main\AndroidManifest.xml:49:13-36
+76        <activity
+76-->C:\Users\SMHRD\AndroidStudioProjects\ABProject\app\src\main\AndroidManifest.xml:50:9-52:40
+77            android:name="com.example.abproject.findshop.FindShop2"
+77-->C:\Users\SMHRD\AndroidStudioProjects\ABProject\app\src\main\AndroidManifest.xml:51:13-47
+78            android:exported="false" />
+78-->C:\Users\SMHRD\AndroidStudioProjects\ABProject\app\src\main\AndroidManifest.xml:52:13-37
+79        <activity
+79-->C:\Users\SMHRD\AndroidStudioProjects\ABProject\app\src\main\AndroidManifest.xml:53:9-61:20
+80            android:name="com.example.abproject.MainActivity"
+80-->C:\Users\SMHRD\AndroidStudioProjects\ABProject\app\src\main\AndroidManifest.xml:54:13-41
+81            android:exported="true" >
+81-->C:\Users\SMHRD\AndroidStudioProjects\ABProject\app\src\main\AndroidManifest.xml:55:13-36
+82            <intent-filter>
+82-->C:\Users\SMHRD\AndroidStudioProjects\ABProject\app\src\main\AndroidManifest.xml:56:13-60:29
+83                <action android:name="android.intent.action.MAIN" />
+83-->C:\Users\SMHRD\AndroidStudioProjects\ABProject\app\src\main\AndroidManifest.xml:57:17-69
+83-->C:\Users\SMHRD\AndroidStudioProjects\ABProject\app\src\main\AndroidManifest.xml:57:25-66
+84
+85                <category android:name="android.intent.category.LAUNCHER" />
+85-->C:\Users\SMHRD\AndroidStudioProjects\ABProject\app\src\main\AndroidManifest.xml:59:17-77
+85-->C:\Users\SMHRD\AndroidStudioProjects\ABProject\app\src\main\AndroidManifest.xml:59:27-74
+86            </intent-filter>
+87        </activity>
+88        <!-- Needs to be explicitly declared on P+ -->
+89        <uses-library
+89-->[com.google.android.gms:play-services-maps:18.1.0] C:\Users\SMHRD\.gradle\caches\transforms-3\b711e1d4f46198e6491015da680f8a5a\transformed\play-services-maps-18.1.0\AndroidManifest.xml:39:9-41:40
+90            android:name="org.apache.http.legacy"
+90-->[com.google.android.gms:play-services-maps:18.1.0] C:\Users\SMHRD\.gradle\caches\transforms-3\b711e1d4f46198e6491015da680f8a5a\transformed\play-services-maps-18.1.0\AndroidManifest.xml:40:13-50
+91            android:required="false" />
+91-->[com.google.android.gms:play-services-maps:18.1.0] C:\Users\SMHRD\.gradle\caches\transforms-3\b711e1d4f46198e6491015da680f8a5a\transformed\play-services-maps-18.1.0\AndroidManifest.xml:41:13-37
+92
+93        <activity
+93-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\SMHRD\.gradle\caches\transforms-3\faf1cb2f373e816d008446127053c2e4\transformed\play-services-base-18.0.1\AndroidManifest.xml:20:9-22:45
+94            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+94-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\SMHRD\.gradle\caches\transforms-3\faf1cb2f373e816d008446127053c2e4\transformed\play-services-base-18.0.1\AndroidManifest.xml:20:19-85
+95            android:exported="false"
+95-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\SMHRD\.gradle\caches\transforms-3\faf1cb2f373e816d008446127053c2e4\transformed\play-services-base-18.0.1\AndroidManifest.xml:22:19-43
+96            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+96-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\SMHRD\.gradle\caches\transforms-3\faf1cb2f373e816d008446127053c2e4\transformed\play-services-base-18.0.1\AndroidManifest.xml:21:19-78
+97
+98        <meta-data
+98-->[com.google.android.gms:play-services-basement:18.0.0] C:\Users\SMHRD\.gradle\caches\transforms-3\463e2cf5e9f03c01d1baff62ffdecde6\transformed\play-services-basement-18.0.0\AndroidManifest.xml:21:9-23:69
+99            android:name="com.google.android.gms.version"
+99-->[com.google.android.gms:play-services-basement:18.0.0] C:\Users\SMHRD\.gradle\caches\transforms-3\463e2cf5e9f03c01d1baff62ffdecde6\transformed\play-services-basement-18.0.0\AndroidManifest.xml:22:13-58
+100            android:value="@integer/google_play_services_version" />
+100-->[com.google.android.gms:play-services-basement:18.0.0] C:\Users\SMHRD\.gradle\caches\transforms-3\463e2cf5e9f03c01d1baff62ffdecde6\transformed\play-services-basement-18.0.0\AndroidManifest.xml:23:13-66
+101
+102        <provider
+102-->[androidx.emoji2:emoji2:1.2.0] C:\Users\SMHRD\.gradle\caches\transforms-3\d1735c872afea04148904d9dcaaead07\transformed\emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
+103            android:name="androidx.startup.InitializationProvider"
+103-->[androidx.emoji2:emoji2:1.2.0] C:\Users\SMHRD\.gradle\caches\transforms-3\d1735c872afea04148904d9dcaaead07\transformed\emoji2-1.2.0\AndroidManifest.xml:25:13-67
+104            android:authorities="com.example.abproject.androidx-startup"
+104-->[androidx.emoji2:emoji2:1.2.0] C:\Users\SMHRD\.gradle\caches\transforms-3\d1735c872afea04148904d9dcaaead07\transformed\emoji2-1.2.0\AndroidManifest.xml:26:13-68
+105            android:exported="false" >
+105-->[androidx.emoji2:emoji2:1.2.0] C:\Users\SMHRD\.gradle\caches\transforms-3\d1735c872afea04148904d9dcaaead07\transformed\emoji2-1.2.0\AndroidManifest.xml:27:13-37
+106            <meta-data
+106-->[androidx.emoji2:emoji2:1.2.0] C:\Users\SMHRD\.gradle\caches\transforms-3\d1735c872afea04148904d9dcaaead07\transformed\emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
+107                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+107-->[androidx.emoji2:emoji2:1.2.0] C:\Users\SMHRD\.gradle\caches\transforms-3\d1735c872afea04148904d9dcaaead07\transformed\emoji2-1.2.0\AndroidManifest.xml:30:17-75
+108                android:value="androidx.startup" />
+108-->[androidx.emoji2:emoji2:1.2.0] C:\Users\SMHRD\.gradle\caches\transforms-3\d1735c872afea04148904d9dcaaead07\transformed\emoji2-1.2.0\AndroidManifest.xml:31:17-49
+109            <meta-data
+109-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\SMHRD\.gradle\caches\transforms-3\13e497b7eaaadcc2b20f8c9992f4a897\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:31:13-33:52
+110                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+110-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\SMHRD\.gradle\caches\transforms-3\13e497b7eaaadcc2b20f8c9992f4a897\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:32:17-78
+111                android:value="androidx.startup" />
+111-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\SMHRD\.gradle\caches\transforms-3\13e497b7eaaadcc2b20f8c9992f4a897\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:33:17-49
+112        </provider>
+113        <provider
+113-->[com.squareup.picasso:picasso:2.71828] C:\Users\SMHRD\.gradle\caches\transforms-3\ae0dcf17c6d7e6993dbdcc9e75972c62\transformed\picasso-2.71828\AndroidManifest.xml:8:9-11:40
+114            android:name="com.squareup.picasso.PicassoProvider"
+114-->[com.squareup.picasso:picasso:2.71828] C:\Users\SMHRD\.gradle\caches\transforms-3\ae0dcf17c6d7e6993dbdcc9e75972c62\transformed\picasso-2.71828\AndroidManifest.xml:9:13-64
+115            android:authorities="com.example.abproject.com.squareup.picasso"
+115-->[com.squareup.picasso:picasso:2.71828] C:\Users\SMHRD\.gradle\caches\transforms-3\ae0dcf17c6d7e6993dbdcc9e75972c62\transformed\picasso-2.71828\AndroidManifest.xml:10:13-72
+116            android:exported="false" />
+116-->[com.squareup.picasso:picasso:2.71828] C:\Users\SMHRD\.gradle\caches\transforms-3\ae0dcf17c6d7e6993dbdcc9e75972c62\transformed\picasso-2.71828\AndroidManifest.xml:11:13-37
+117    </application>
+118
+119</manifest>

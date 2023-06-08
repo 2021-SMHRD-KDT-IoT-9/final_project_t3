@@ -1,0 +1,326 @@
+[
+    {
+        "merged": "C:\\Users\\SMHRD\\.gradle\\daemon\\8.0\\com.example.abproject.app-merged_res-31:\\drawable_img_ad3.png.flat",
+        "source": "C:\\Users\\SMHRD\\.gradle\\daemon\\8.0\\com.example.abproject.app-main-33:\\drawable\\img_ad3.png"
+    },
+    {
+        "merged": "C:\\Users\\SMHRD\\.gradle\\daemon\\8.0\\com.example.abproject.app-merged_res-31:\\layout_activity_all_style.xml.flat",
+        "source": "C:\\Users\\SMHRD\\.gradle\\daemon\\8.0\\com.example.abproject.app-main-33:\\layout\\activity_all_style.xml"
+    },
+    {
+        "merged": "C:\\Users\\SMHRD\\.gradle\\daemon\\8.0\\com.example.abproject.app-merged_res-31:\\drawable_imgmyhistory2.png.flat",
+        "source": "C:\\Users\\SMHRD\\.gradle\\daemon\\8.0\\com.example.abproject.app-main-33:\\drawable\\imgmyhistory2.png"
+    },
+    {
+        "merged": "C:\\Users\\SMHRD\\.gradle\\daemon\\8.0\\com.example.abproject.app-merged_res-31:\\layout_my_list.xml.flat",
+        "source": "C:\\Users\\SMHRD\\.gradle\\daemon\\8.0\\com.example.abproject.app-main-33:\\layout\\my_list.xml"
+    },
+    {
+        "merged": "C:\\Users\\SMHRD\\.gradle\\daemon\\8.0\\com.example.abproject.app-merged_res-31:\\drawable_img4.jpg.flat",
+        "source": "C:\\Users\\SMHRD\\.gradle\\daemon\\8.0\\com.example.abproject.app-main-33:\\drawable\\img4.jpg"
+    },
+    {
+        "merged": "C:\\Users\\SMHRD\\.gradle\\daemon\\8.0\\com.example.abproject.app-merged_res-31:\\drawable_imgnaver.png.flat",
+        "source": "C:\\Users\\SMHRD\\.gradle\\daemon\\8.0\\com.example.abproject.app-main-33:\\drawable\\imgnaver.png"
+    },
+    {
+        "merged": "C:\\Users\\SMHRD\\.gradle\\daemon\\8.0\\com.example.abproject.app-merged_res-31:\\drawable_imgfind3.png.flat",
+        "source": "C:\\Users\\SMHRD\\.gradle\\daemon\\8.0\\com.example.abproject.app-main-33:\\drawable\\imgfind3.png"
+    },
+    {
+        "merged": "C:\\Users\\SMHRD\\.gradle\\daemon\\8.0\\com.example.abproject.app-merged_res-31:\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "C:\\Users\\SMHRD\\.gradle\\daemon\\8.0\\com.example.abproject.app-main-33:\\mipmap-anydpi-v26\\ic_launcher.xml"
+    },
+    {
+        "merged": "C:\\Users\\SMHRD\\.gradle\\daemon\\8.0\\com.example.abproject.app-merged_res-31:\\drawable_shop3.jpg.flat",
+        "source": "C:\\Users\\SMHRD\\.gradle\\daemon\\8.0\\com.example.abproject.app-main-33:\\drawable\\shop3.jpg"
+    },
+    {
+        "merged": "C:\\Users\\SMHRD\\.gradle\\daemon\\8.0\\com.example.abproject.app-merged_res-31:\\mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\SMHRD\\.gradle\\daemon\\8.0\\com.example.abproject.app-main-33:\\mipmap-hdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\SMHRD\\.gradle\\daemon\\8.0\\com.example.abproject.app-merged_res-31:\\drawable_img3.png.flat",
+        "source": "C:\\Users\\SMHRD\\.gradle\\daemon\\8.0\\com.example.abproject.app-main-33:\\drawable\\img3.png"
+    },
+    {
+        "merged": "C:\\Users\\SMHRD\\.gradle\\daemon\\8.0\\com.example.abproject.app-merged_res-31:\\layout_activity_my_history.xml.flat",
+        "source": "C:\\Users\\SMHRD\\.gradle\\daemon\\8.0\\com.example.abproject.app-main-33:\\layout\\activity_my_history.xml"
+    },
+    {
+        "merged": "C:\\Users\\SMHRD\\.gradle\\daemon\\8.0\\com.example.abproject.app-merged_res-31:\\drawable_img_ad04.png.flat",
+        "source": "C:\\Users\\SMHRD\\.gradle\\daemon\\8.0\\com.example.abproject.app-main-33:\\drawable\\img_ad04.png"
+    },
+    {
+        "merged": "C:\\Users\\SMHRD\\.gradle\\daemon\\8.0\\com.example.abproject.app-merged_res-31:\\drawable_imgh2.png.flat",
+        "source": "C:\\Users\\SMHRD\\.gradle\\daemon\\8.0\\com.example.abproject.app-main-33:\\drawable\\imgh2.png"
+    },
+    {
+        "merged": "C:\\Users\\SMHRD\\.gradle\\daemon\\8.0\\com.example.abproject.app-merged_res-31:\\layout_activity_find_shop4.xml.flat",
+        "source": "C:\\Users\\SMHRD\\.gradle\\daemon\\8.0\\com.example.abproject.app-main-33:\\layout\\activity_find_shop4.xml"
+    },
+    {
+        "merged": "C:\\Users\\SMHRD\\.gradle\\daemon\\8.0\\com.example.abproject.app-merged_res-31:\\font_antokki.ttf.flat",
+        "source": "C:\\Users\\SMHRD\\.gradle\\daemon\\8.0\\com.example.abproject.app-main-33:\\font\\antokki.ttf"
+    },
+    {
+        "merged": "C:\\Users\\SMHRD\\.gradle\\daemon\\8.0\\com.example.abproject.app-merged_res-31:\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "C:\\Users\\SMHRD\\.gradle\\daemon\\8.0\\com.example.abproject.app-main-33:\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+    },
+    {
+        "merged": "C:\\Users\\SMHRD\\.gradle\\daemon\\8.0\\com.example.abproject.app-merged_res-31:\\drawable_imgallstyle.png.flat",
+        "source": "C:\\Users\\SMHRD\\.gradle\\daemon\\8.0\\com.example.abproject.app-main-33:\\drawable\\imgallstyle.png"
+    },
+    {
+        "merged": "C:\\Users\\SMHRD\\.gradle\\daemon\\8.0\\com.example.abproject.app-merged_res-31:\\layout_all_list.xml.flat",
+        "source": "C:\\Users\\SMHRD\\.gradle\\daemon\\8.0\\com.example.abproject.app-main-33:\\layout\\all_list.xml"
+    },
+    {
+        "merged": "C:\\Users\\SMHRD\\.gradle\\daemon\\8.0\\com.example.abproject.app-merged_res-31:\\drawable_baseline_arrow_forward_ios_24.xml.flat",
+        "source": "C:\\Users\\SMHRD\\.gradle\\daemon\\8.0\\com.example.abproject.app-main-33:\\drawable\\baseline_arrow_forward_ios_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\SMHRD\\.gradle\\daemon\\8.0\\com.example.abproject.app-merged_res-31:\\layout_activity_main.xml.flat",
+        "source": "C:\\Users\\SMHRD\\.gradle\\daemon\\8.0\\com.example.abproject.app-main-33:\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "com.example.abproject.app-merged_res-31:/layout_activity_main.xml.flat",
+        "source": "com.example.abproject.app-main-33:/layout/activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\SMHRD\\.gradle\\daemon\\8.0\\com.example.abproject.app-merged_res-31:\\drawable_imgfind4.png.flat",
+        "source": "C:\\Users\\SMHRD\\.gradle\\daemon\\8.0\\com.example.abproject.app-main-33:\\drawable\\imgfind4.png"
+    },
+    {
+        "merged": "C:\\Users\\SMHRD\\.gradle\\daemon\\8.0\\com.example.abproject.app-merged_res-31:\\xml_backup_rules.xml.flat",
+        "source": "C:\\Users\\SMHRD\\.gradle\\daemon\\8.0\\com.example.abproject.app-main-33:\\xml\\backup_rules.xml"
+    },
+    {
+        "merged": "C:\\Users\\SMHRD\\.gradle\\daemon\\8.0\\com.example.abproject.app-merged_res-31:\\drawable_outline_arrow_back_ios_24.xml.flat",
+        "source": "C:\\Users\\SMHRD\\.gradle\\daemon\\8.0\\com.example.abproject.app-main-33:\\drawable\\outline_arrow_back_ios_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\SMHRD\\.gradle\\daemon\\8.0\\com.example.abproject.app-merged_res-31:\\drawable_img_ad2.png.flat",
+        "source": "C:\\Users\\SMHRD\\.gradle\\daemon\\8.0\\com.example.abproject.app-main-33:\\drawable\\img_ad2.png"
+    },
+    {
+        "merged": "C:\\Users\\SMHRD\\.gradle\\daemon\\8.0\\com.example.abproject.app-merged_res-31:\\layout_activity_find_shop3.xml.flat",
+        "source": "C:\\Users\\SMHRD\\.gradle\\daemon\\8.0\\com.example.abproject.app-main-33:\\layout\\activity_find_shop3.xml"
+    },
+    {
+        "merged": "C:\\Users\\SMHRD\\.gradle\\daemon\\8.0\\com.example.abproject.app-merged_res-31:\\drawable_imgfind.png.flat",
+        "source": "C:\\Users\\SMHRD\\.gradle\\daemon\\8.0\\com.example.abproject.app-main-33:\\drawable\\imgfind.png"
+    },
+    {
+        "merged": "C:\\Users\\SMHRD\\.gradle\\daemon\\8.0\\com.example.abproject.app-merged_res-31:\\mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\SMHRD\\.gradle\\daemon\\8.0\\com.example.abproject.app-main-33:\\mipmap-xhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\SMHRD\\.gradle\\daemon\\8.0\\com.example.abproject.app-merged_res-31:\\drawable_dotred.png.flat",
+        "source": "C:\\Users\\SMHRD\\.gradle\\daemon\\8.0\\com.example.abproject.app-main-33:\\drawable\\dotred.png"
+    },
+    {
+        "merged": "C:\\Users\\SMHRD\\.gradle\\daemon\\8.0\\com.example.abproject.app-merged_res-31:\\mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\SMHRD\\.gradle\\daemon\\8.0\\com.example.abproject.app-main-33:\\mipmap-hdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\SMHRD\\.gradle\\daemon\\8.0\\com.example.abproject.app-merged_res-31:\\mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\SMHRD\\.gradle\\daemon\\8.0\\com.example.abproject.app-main-33:\\mipmap-mdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\SMHRD\\.gradle\\daemon\\8.0\\com.example.abproject.app-merged_res-31:\\drawable_img_ad01.png.flat",
+        "source": "C:\\Users\\SMHRD\\.gradle\\daemon\\8.0\\com.example.abproject.app-main-33:\\drawable\\img_ad01.png"
+    },
+    {
+        "merged": "C:\\Users\\SMHRD\\.gradle\\daemon\\8.0\\com.example.abproject.app-merged_res-31:\\drawable_dotgray.png.flat",
+        "source": "C:\\Users\\SMHRD\\.gradle\\daemon\\8.0\\com.example.abproject.app-main-33:\\drawable\\dotgray.png"
+    },
+    {
+        "merged": "C:\\Users\\SMHRD\\.gradle\\daemon\\8.0\\com.example.abproject.app-merged_res-31:\\drawable_imgh.png.flat",
+        "source": "C:\\Users\\SMHRD\\.gradle\\daemon\\8.0\\com.example.abproject.app-main-33:\\drawable\\imgh.png"
+    },
+    {
+        "merged": "C:\\Users\\SMHRD\\.gradle\\daemon\\8.0\\com.example.abproject.app-merged_res-31:\\mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\SMHRD\\.gradle\\daemon\\8.0\\com.example.abproject.app-main-33:\\mipmap-xxhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\SMHRD\\.gradle\\daemon\\8.0\\com.example.abproject.app-merged_res-31:\\drawable_logo.png.flat",
+        "source": "C:\\Users\\SMHRD\\.gradle\\daemon\\8.0\\com.example.abproject.app-main-33:\\drawable\\logo.png"
+    },
+    {
+        "merged": "C:\\Users\\SMHRD\\.gradle\\daemon\\8.0\\com.example.abproject.app-merged_res-31:\\drawable_img2.png.flat",
+        "source": "C:\\Users\\SMHRD\\.gradle\\daemon\\8.0\\com.example.abproject.app-main-33:\\drawable\\img2.png"
+    },
+    {
+        "merged": "C:\\Users\\SMHRD\\.gradle\\daemon\\8.0\\com.example.abproject.app-merged_res-31:\\drawable_imgh3.png.flat",
+        "source": "C:\\Users\\SMHRD\\.gradle\\daemon\\8.0\\com.example.abproject.app-main-33:\\drawable\\imgh3.png"
+    },
+    {
+        "merged": "C:\\Users\\SMHRD\\.gradle\\daemon\\8.0\\com.example.abproject.app-merged_res-31:\\drawable_radius_imageview.xml.flat",
+        "source": "C:\\Users\\SMHRD\\.gradle\\daemon\\8.0\\com.example.abproject.app-main-33:\\drawable\\radius_imageview.xml"
+    },
+    {
+        "merged": "C:\\Users\\SMHRD\\.gradle\\daemon\\8.0\\com.example.abproject.app-merged_res-31:\\layout_activity_find_shop.xml.flat",
+        "source": "C:\\Users\\SMHRD\\.gradle\\daemon\\8.0\\com.example.abproject.app-main-33:\\layout\\activity_find_shop.xml"
+    },
+    {
+        "merged": "C:\\Users\\SMHRD\\.gradle\\daemon\\8.0\\com.example.abproject.app-merged_res-31:\\drawable_shop2.jpg.flat",
+        "source": "C:\\Users\\SMHRD\\.gradle\\daemon\\8.0\\com.example.abproject.app-main-33:\\drawable\\shop2.jpg"
+    },
+    {
+        "merged": "C:\\Users\\SMHRD\\.gradle\\daemon\\8.0\\com.example.abproject.app-merged_res-31:\\layout_shop_list.xml.flat",
+        "source": "C:\\Users\\SMHRD\\.gradle\\daemon\\8.0\\com.example.abproject.app-main-33:\\layout\\shop_list.xml"
+    },
+    {
+        "merged": "C:\\Users\\SMHRD\\.gradle\\daemon\\8.0\\com.example.abproject.app-merged_res-31:\\font_gsansm.ttf.flat",
+        "source": "C:\\Users\\SMHRD\\.gradle\\daemon\\8.0\\com.example.abproject.app-main-33:\\font\\gsansm.ttf"
+    },
+    {
+        "merged": "C:\\Users\\SMHRD\\.gradle\\daemon\\8.0\\com.example.abproject.app-merged_res-31:\\font_font.xml.flat",
+        "source": "C:\\Users\\SMHRD\\.gradle\\daemon\\8.0\\com.example.abproject.app-main-33:\\font\\font.xml"
+    },
+    {
+        "merged": "C:\\Users\\SMHRD\\.gradle\\daemon\\8.0\\com.example.abproject.app-merged_res-31:\\drawable_shop5.jpg.flat",
+        "source": "C:\\Users\\SMHRD\\.gradle\\daemon\\8.0\\com.example.abproject.app-main-33:\\drawable\\shop5.jpg"
+    },
+    {
+        "merged": "C:\\Users\\SMHRD\\.gradle\\daemon\\8.0\\com.example.abproject.app-merged_res-31:\\drawable_imgfind5.png.flat",
+        "source": "C:\\Users\\SMHRD\\.gradle\\daemon\\8.0\\com.example.abproject.app-main-33:\\drawable\\imgfind5.png"
+    },
+    {
+        "merged": "C:\\Users\\SMHRD\\.gradle\\daemon\\8.0\\com.example.abproject.app-merged_res-31:\\layout_activity_find_shop2.xml.flat",
+        "source": "C:\\Users\\SMHRD\\.gradle\\daemon\\8.0\\com.example.abproject.app-main-33:\\layout\\activity_find_shop2.xml"
+    },
+    {
+        "merged": "C:\\Users\\SMHRD\\.gradle\\daemon\\8.0\\com.example.abproject.app-merged_res-31:\\xml_data_extraction_rules.xml.flat",
+        "source": "C:\\Users\\SMHRD\\.gradle\\daemon\\8.0\\com.example.abproject.app-main-33:\\xml\\data_extraction_rules.xml"
+    },
+    {
+        "merged": "C:\\Users\\SMHRD\\.gradle\\daemon\\8.0\\com.example.abproject.app-merged_res-31:\\drawable_imgl2.png.flat",
+        "source": "C:\\Users\\SMHRD\\.gradle\\daemon\\8.0\\com.example.abproject.app-main-33:\\drawable\\imgl2.png"
+    },
+    {
+        "merged": "C:\\Users\\SMHRD\\.gradle\\daemon\\8.0\\com.example.abproject.app-merged_res-31:\\drawable_imgback.png.flat",
+        "source": "C:\\Users\\SMHRD\\.gradle\\daemon\\8.0\\com.example.abproject.app-main-33:\\drawable\\imgback.png"
+    },
+    {
+        "merged": "C:\\Users\\SMHRD\\.gradle\\daemon\\8.0\\com.example.abproject.app-merged_res-31:\\font_gsanslight.ttf.flat",
+        "source": "C:\\Users\\SMHRD\\.gradle\\daemon\\8.0\\com.example.abproject.app-main-33:\\font\\gsanslight.ttf"
+    },
+    {
+        "merged": "C:\\Users\\SMHRD\\.gradle\\daemon\\8.0\\com.example.abproject.app-merged_res-31:\\layout_activity_login.xml.flat",
+        "source": "C:\\Users\\SMHRD\\.gradle\\daemon\\8.0\\com.example.abproject.app-main-33:\\layout\\activity_login.xml"
+    },
+    {
+        "merged": "C:\\Users\\SMHRD\\.gradle\\daemon\\8.0\\com.example.abproject.app-merged_res-31:\\layout_activity_detail_shop.xml.flat",
+        "source": "C:\\Users\\SMHRD\\.gradle\\daemon\\8.0\\com.example.abproject.app-main-33:\\layout\\activity_detail_shop.xml"
+    },
+    {
+        "merged": "C:\\Users\\SMHRD\\.gradle\\daemon\\8.0\\com.example.abproject.app-merged_res-31:\\drawable_imgl.jpg.flat",
+        "source": "C:\\Users\\SMHRD\\.gradle\\daemon\\8.0\\com.example.abproject.app-main-33:\\drawable\\imgl.jpg"
+    },
+    {
+        "merged": "C:\\Users\\SMHRD\\.gradle\\daemon\\8.0\\com.example.abproject.app-merged_res-31:\\mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\SMHRD\\.gradle\\daemon\\8.0\\com.example.abproject.app-main-33:\\mipmap-xxxhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\SMHRD\\.gradle\\daemon\\8.0\\com.example.abproject.app-merged_res-31:\\drawable_threeline.png.flat",
+        "source": "C:\\Users\\SMHRD\\.gradle\\daemon\\8.0\\com.example.abproject.app-main-33:\\drawable\\threeline.png"
+    },
+    {
+        "merged": "C:\\Users\\SMHRD\\.gradle\\daemon\\8.0\\com.example.abproject.app-merged_res-31:\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\SMHRD\\.gradle\\daemon\\8.0\\com.example.abproject.app-main-33:\\mipmap-xxhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\SMHRD\\.gradle\\daemon\\8.0\\com.example.abproject.app-merged_res-31:\\drawable_mapmap.png.flat",
+        "source": "C:\\Users\\SMHRD\\.gradle\\daemon\\8.0\\com.example.abproject.app-main-33:\\drawable\\mapmap.png"
+    },
+    {
+        "merged": "C:\\Users\\SMHRD\\.gradle\\daemon\\8.0\\com.example.abproject.app-merged_res-31:\\drawable_imgmyhistory.png.flat",
+        "source": "C:\\Users\\SMHRD\\.gradle\\daemon\\8.0\\com.example.abproject.app-main-33:\\drawable\\imgmyhistory.png"
+    },
+    {
+        "merged": "C:\\Users\\SMHRD\\.gradle\\daemon\\8.0\\com.example.abproject.app-merged_res-31:\\drawable_img_ad1.png.flat",
+        "source": "C:\\Users\\SMHRD\\.gradle\\daemon\\8.0\\com.example.abproject.app-main-33:\\drawable\\img_ad1.png"
+    },
+    {
+        "merged": "C:\\Users\\SMHRD\\.gradle\\daemon\\8.0\\com.example.abproject.app-merged_res-31:\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\SMHRD\\.gradle\\daemon\\8.0\\com.example.abproject.app-main-33:\\mipmap-xxxhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\SMHRD\\.gradle\\daemon\\8.0\\com.example.abproject.app-merged_res-31:\\drawable_img_ad02.png.flat",
+        "source": "C:\\Users\\SMHRD\\.gradle\\daemon\\8.0\\com.example.abproject.app-main-33:\\drawable\\img_ad02.png"
+    },
+    {
+        "merged": "C:\\Users\\SMHRD\\.gradle\\daemon\\8.0\\com.example.abproject.app-merged_res-31:\\drawable_call2.png.flat",
+        "source": "C:\\Users\\SMHRD\\.gradle\\daemon\\8.0\\com.example.abproject.app-main-33:\\drawable\\call2.png"
+    },
+    {
+        "merged": "C:\\Users\\SMHRD\\.gradle\\daemon\\8.0\\com.example.abproject.app-merged_res-31:\\drawable_imgallstyle2.png.flat",
+        "source": "C:\\Users\\SMHRD\\.gradle\\daemon\\8.0\\com.example.abproject.app-main-33:\\drawable\\imgallstyle2.png"
+    },
+    {
+        "merged": "C:\\Users\\SMHRD\\.gradle\\daemon\\8.0\\com.example.abproject.app-merged_res-31:\\drawable_shop1.jpg.flat",
+        "source": "C:\\Users\\SMHRD\\.gradle\\daemon\\8.0\\com.example.abproject.app-main-33:\\drawable\\shop1.jpg"
+    },
+    {
+        "merged": "C:\\Users\\SMHRD\\.gradle\\daemon\\8.0\\com.example.abproject.app-merged_res-31:\\drawable_dot.png.flat",
+        "source": "C:\\Users\\SMHRD\\.gradle\\daemon\\8.0\\com.example.abproject.app-main-33:\\drawable\\dot.png"
+    },
+    {
+        "merged": "C:\\Users\\SMHRD\\.gradle\\daemon\\8.0\\com.example.abproject.app-merged_res-31:\\mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\SMHRD\\.gradle\\daemon\\8.0\\com.example.abproject.app-main-33:\\mipmap-xhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\SMHRD\\.gradle\\daemon\\8.0\\com.example.abproject.app-merged_res-31:\\drawable_imgnaver2.png.flat",
+        "source": "C:\\Users\\SMHRD\\.gradle\\daemon\\8.0\\com.example.abproject.app-main-33:\\drawable\\imgnaver2.png"
+    },
+    {
+        "merged": "C:\\Users\\SMHRD\\.gradle\\daemon\\8.0\\com.example.abproject.app-merged_res-31:\\layout_fragment_test.xml.flat",
+        "source": "C:\\Users\\SMHRD\\.gradle\\daemon\\8.0\\com.example.abproject.app-main-33:\\layout\\fragment_test.xml"
+    },
+    {
+        "merged": "C:\\Users\\SMHRD\\.gradle\\daemon\\8.0\\com.example.abproject.app-merged_res-31:\\drawable_img1.png.flat",
+        "source": "C:\\Users\\SMHRD\\.gradle\\daemon\\8.0\\com.example.abproject.app-main-33:\\drawable\\img1.png"
+    },
+    {
+        "merged": "C:\\Users\\SMHRD\\.gradle\\daemon\\8.0\\com.example.abproject.app-merged_res-31:\\drawable_img5.jpg.flat",
+        "source": "C:\\Users\\SMHRD\\.gradle\\daemon\\8.0\\com.example.abproject.app-main-33:\\drawable\\img5.jpg"
+    },
+    {
+        "merged": "C:\\Users\\SMHRD\\.gradle\\daemon\\8.0\\com.example.abproject.app-merged_res-31:\\drawable_bg1.png.flat",
+        "source": "C:\\Users\\SMHRD\\.gradle\\daemon\\8.0\\com.example.abproject.app-main-33:\\drawable\\bg1.png"
+    },
+    {
+        "merged": "C:\\Users\\SMHRD\\.gradle\\daemon\\8.0\\com.example.abproject.app-merged_res-31:\\mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\SMHRD\\.gradle\\daemon\\8.0\\com.example.abproject.app-main-33:\\mipmap-mdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\SMHRD\\.gradle\\daemon\\8.0\\com.example.abproject.app-merged_res-31:\\drawable_imgfind2.png.flat",
+        "source": "C:\\Users\\SMHRD\\.gradle\\daemon\\8.0\\com.example.abproject.app-main-33:\\drawable\\imgfind2.png"
+    },
+    {
+        "merged": "C:\\Users\\SMHRD\\.gradle\\daemon\\8.0\\com.example.abproject.app-merged_res-31:\\drawable_ic_launcher_background.xml.flat",
+        "source": "C:\\Users\\SMHRD\\.gradle\\daemon\\8.0\\com.example.abproject.app-main-33:\\drawable\\ic_launcher_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\SMHRD\\.gradle\\daemon\\8.0\\com.example.abproject.app-merged_res-31:\\drawable_shop4.jpg.flat",
+        "source": "C:\\Users\\SMHRD\\.gradle\\daemon\\8.0\\com.example.abproject.app-main-33:\\drawable\\shop4.jpg"
+    },
+    {
+        "merged": "C:\\Users\\SMHRD\\.gradle\\daemon\\8.0\\com.example.abproject.app-merged_res-31:\\layout_activity_my_history_detail.xml.flat",
+        "source": "C:\\Users\\SMHRD\\.gradle\\daemon\\8.0\\com.example.abproject.app-main-33:\\layout\\activity_my_history_detail.xml"
+    },
+    {
+        "merged": "C:\\Users\\SMHRD\\.gradle\\daemon\\8.0\\com.example.abproject.app-merged_res-31:\\drawable-v24_ic_launcher_foreground.xml.flat",
+        "source": "C:\\Users\\SMHRD\\.gradle\\daemon\\8.0\\com.example.abproject.app-main-33:\\drawable-v24\\ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "C:\\Users\\SMHRD\\.gradle\\daemon\\8.0\\com.example.abproject.app-merged_res-31:\\drawable_map.png.flat",
+        "source": "C:\\Users\\SMHRD\\.gradle\\daemon\\8.0\\com.example.abproject.app-main-33:\\drawable\\map.png"
+    },
+    {
+        "merged": "C:\\Users\\SMHRD\\.gradle\\daemon\\8.0\\com.example.abproject.app-merged_res-31:\\drawable_img_ad03.png.flat",
+        "source": "C:\\Users\\SMHRD\\.gradle\\daemon\\8.0\\com.example.abproject.app-main-33:\\drawable\\img_ad03.png"
+    }
+]
