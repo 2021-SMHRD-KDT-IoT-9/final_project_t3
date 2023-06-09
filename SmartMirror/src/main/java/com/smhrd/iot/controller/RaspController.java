@@ -74,11 +74,13 @@ public class RaspController {
 		mh.setSalon_id("a000");
     	mh.setMemo("AfterMemo");
     	
-		String picName = "after_"+mh.getSalon_id()+"_"+mh.getMember_id()+"_"+seq+".jpg";
+    	String picN = "after_"+mh.getSalon_id()+"_"+mh.getMember_id()+"_"+seq;
+    	
+		String picName = picN+".jpg";
 				
     	String src = "C:/Users/user/git/final_project_t3/SmartMirror/src/main/resources/static/afterImg/"+picName;
     	
-		mh.setPic_path(picName);
+		mh.setPic_path(picN);
     	
 		ResponseEntity<String> result = restMirrorController.callFlaskServer();
 		

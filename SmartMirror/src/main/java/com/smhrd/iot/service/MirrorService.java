@@ -18,11 +18,13 @@ public class MirrorService {
 
 	@Autowired
 	private MirrorMapper mapper;
-		
+	
+	// after 사진 찍은 후 DB에 member_id, salon_id, pic_path 저장
 	public void insertpic(MyHistory mh) {
 		mapper.insertpic(mh);
 	}
 	
+	// 
 	public List<MyHistory> myHistory (String id){
 		return mapper.myHistory(id);
 	}
